@@ -88,5 +88,20 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 //floating link start
 
+
+//hamburger
+var hamburgerIsOpen = false;
+
+document.querySelector(".hamburger").addEventListener("click", function(){
+    document.querySelector(".navbar-mobile").classList.add("hamburger-active");
+    hamburgerIsOpen = true;
+});
+
+document.querySelector(".close-btn").addEventListener("click", function(){
+    document.querySelector(".navbar-mobile").classList.remove("hamburger-active");
+    hamburgerIsOpen = false;
+});
+//hamburger
+
     
 });
