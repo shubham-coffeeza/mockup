@@ -12,6 +12,50 @@ body {
   margin: 0;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-left {
+  align-items: flex-end;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
 .container {
   margin: 0 auto;
   padding-left: 30px;
@@ -418,4 +462,99 @@ main .floating-link-window .floating-link-btn {
     background: transparent;
     border: none;
   }
+}
+footer {
+  background-color: #111;
+  color: #fff;
+  z-index: 1;
+  position: relative;
+}
+footer .first {
+  background-color: #353535;
+  padding: 36px 0;
+}
+footer .first .left h2 {
+  width: 360px;
+  color: #d17c0c;
+  font-size: 20px;
+}
+footer .first .left p {
+  font-size: 12px;
+  width: 360px;
+}
+footer .first .left input {
+  border-radius: 8px;
+  border: 1px solid #a0a1a2;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: 48px;
+  padding: 0 24px;
+  font-size: 14px;
+  line-height: 22px;
+  width: 300px;
+  margin-left: 40px;
+}
+footer .first .left button {
+  font-size: 14px;
+  height: 48px;
+  width: 120px;
+  padding: 12px 24px;
+  line-height: 14px;
+  color: #fff;
+  background-color: #111;
+  border-radius: 8px;
+  border: 2px solid #d17c0c;
+  cursor: pointer;
+  margin-left: 30px;
+}
+footer .first .right svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  margin-left: 20px;
+}
+footer .second {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+footer .second .left ul h3 {
+  color: #d17c0c;
+}
+footer .second .left ul li {
+  list-style-type: none;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  line-height: 35px;
+  color: #c3c5c6;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+footer .second .right h3 {
+  color: #d17c0c;
+  margin-bottom: 8px;
+}
+footer .second .right svg {
+  width: 20px;
+  height: 20px;
+  fill: #d17c0c;
+  margin-right: 20px;
+}
+footer .second .right p:first-child {
+  margin: 10px 0;
+  color: #a0a1a2;
+  font-size: 12px;
+}
+footer .third p {
+  text-align: center;
+  font-size: 14px;
+  color: #d17c0c;
+}
+footer .third p:last-child {
+  margin-top: 30px;
+  font-size: 12px;
+  width: 70%;
+  margin: 12px auto 0;
+  padding-bottom: 36px;
+  color: #fff;
 }/*# sourceMappingURL=index.css.map */
