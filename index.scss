@@ -186,7 +186,7 @@ main{
     .floating-link-window{
         position: fixed;
         right: -35px;
-        top: 50%;
+        top: 50%; 
         transform: translateY(-50%);
         &:hover{
             .link{
