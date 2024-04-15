@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Function to close the floating link window
     function closeFloatingLinkWindow() {
-        document.querySelector(".floating-link-window").style.transform = "translate(200px, -50%)";
+        document.querySelector(".floating-link-window").style.transform = "translate(240px, -50%)";
         document.querySelector(".floating-link-btn").style.transform = "translateY(-50%) rotate(0deg)";
         isOpen = false;
     }
@@ -88,6 +88,26 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 //floating link start
 
+
+//Coupon Btn
+    
+    document.querySelector(".coupon-btn-wrapper").addEventListener("click", function(){
+        document.querySelector(".coupon").classList.add("active");
+    });
+
+    document.querySelector("main").addEventListener("click", function(){
+        document.querySelector(".coupon").classList.remove("active");
+    });
+
+    document.querySelector("footer").addEventListener("click", function(){
+        document.querySelector(".coupon").classList.remove("active");
+    });
+
+    document.querySelector(".header-banner-wrapper").addEventListener("click", function(){
+        document.querySelector(".coupon").classList.remove("active");
+    });
+    
+//Coupon Btn
 
 //hamburger
 var hamburgerIsOpen = false;

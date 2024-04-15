@@ -8,7 +8,7 @@ body {
 }
 
 * {
-  padding: 0; 
+  padding: 0;
   margin: 0;
 }
 
@@ -80,6 +80,17 @@ body {
     padding-right: 15px;
   }
 }
+.promo-wrapper {
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  border-bottom: 0.5px solid lightgray;
+}
+.promo-wrapper p {
+  padding: 10px 0;
+}
+
 .header-banner-wrapper {
   background-image: url("./hero.jpg");
   background-repeat: no-repeat;
@@ -216,7 +227,7 @@ main .main-div h2 {
 }
 main .floating-link-window {
   position: fixed;
-  right: -35px;
+  right: 15px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -292,6 +303,124 @@ main .floating-link-window .floating-link-btn {
   display: none;
 }
 
+.coupon-wrapper {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.coupon-wrapper .coupon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -500px;
+  transition: all 1s cubic-bezier(0.5, 0, 0, 1) 0s;
+}
+.coupon-wrapper .coupon img {
+  width: 500px;
+  height: 200px;
+}
+.coupon-wrapper .coupon.active {
+  left: 0;
+}
+.coupon-wrapper .coupon .text-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+}
+.coupon-wrapper .coupon .text-wrapper .left {
+  transform: rotate(270deg);
+}
+.coupon-wrapper .coupon .text-wrapper .left h4 {
+  text-align: center;
+  font-size: 12px;
+}
+.coupon-wrapper .coupon .text-wrapper .left p {
+  font-size: 100px;
+  -webkit-text-stroke-color: #ca192e;
+  -webkit-text-stroke-width: 1px;
+  color: transparent;
+  font-family: fantasy;
+  text-align: center;
+  line-height: 100px;
+}
+.coupon-wrapper .coupon .text-wrapper .right {
+  color: #fff;
+  margin-left: 30px;
+}
+.coupon-wrapper .coupon .text-wrapper .right h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.coupon-wrapper .coupon .text-wrapper .right .coupon-text {
+  font-size: 80px;
+  -webkit-text-stroke-color: #ffffff;
+  -webkit-text-stroke-width: 1px;
+  color: transparent;
+  text-align: center;
+  font-family: fantasy;
+}
+.coupon-wrapper .coupon .text-wrapper .right .validity {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+.coupon-wrapper .coupon-btn-wrapper {
+  position: fixed;
+  top: 50%;
+  left: -72px;
+  transform: translateY(-50%) rotate(270deg);
+}
+.coupon-wrapper .coupon-btn-wrapper .coupon-btn {
+  background: #ca192e;
+  animation: whiteGlare 3s linear infinite;
+  border: none;
+  padding: 5px 30px;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: fantasy;
+  width: 195px;
+  color: transparent;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 0.51px;
+  position: relative;
+  cursor: pointer;
+}
+@keyframes whiteGlare {
+  0% {
+    background: #af5661;
+  }
+  50% {
+    background: #ca192e;
+  }
+  75% {
+    background: #ff001e;
+  }
+  100% {
+    background: #af5661;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  footer .first .left p {
+    font-size: 10px !important;
+    width: 240px !important;
+  }
+  footer .first .left h2 {
+    font-size: 14px !important;
+    width: 240px !important;
+  }
+  footer .first .right svg {
+    margin-left: 15px;
+  }
+}
 @media screen and (max-width: 545px) {
   .header-banner-wrapper {
     background-image: url("./hero-mobie.jpg");
@@ -328,6 +457,7 @@ main .floating-link-window .floating-link-btn {
   .header-banner-wrapper .logo-wrapper h1 {
     font-size: 22px;
     text-align: center;
+    letter-spacing: 15px !important;
   }
   .header-banner-wrapper .scrolled .logo-wrapper {
     left: 50%;
@@ -336,6 +466,7 @@ main .floating-link-window .floating-link-btn {
   }
   .header-banner-wrapper .scrolled .logo-wrapper h1 {
     font-size: 22px;
+    letter-spacing: 5px !important;
   }
   .header-banner-wrapper .navbar-mobile {
     overflow: auto;
@@ -360,13 +491,14 @@ main .floating-link-window .floating-link-btn {
     align-items: flex-start;
     flex-direction: column;
     padding: 0 15px;
-    margin: 40px 0;
+    margin: 30px 0;
   }
   .header-banner-wrapper .navbar-mobile ul li, .header-banner-wrapper .navbar-mobile ul li:last-child {
     padding: 4px 0;
     margin: 8px 0;
     font-weight: 900;
     color: #000;
+    font-size: 18px;
   }
   .header-banner-wrapper .navbar-mobile svg {
     display: block;
@@ -401,6 +533,7 @@ main .floating-link-window .floating-link-btn {
   }
   .header-banner-wrapper .navbar-mobile .featured-wrapper .features p {
     color: grey;
+    font-size: 12px;
   }
   .header-banner-wrapper .navbar-mobile .sale-wrapper {
     display: flex;
@@ -423,7 +556,7 @@ main .floating-link-window .floating-link-btn {
     border-radius: 8px;
   }
   .header-banner-wrapper .navbar-mobile .specials {
-    background: lightgray;
+    background: #f7f3ec;
     padding: 40px 15px;
   }
   .header-banner-wrapper .navbar-mobile .specials div {
@@ -431,12 +564,27 @@ main .floating-link-window .floating-link-btn {
   }
   .header-banner-wrapper .navbar-mobile .specials p {
     font-size: 12px;
+    color: #99886c;
   }
   .header-banner-wrapper .navbar-mobile .bottom-links {
     margin: 40px 15px;
   }
   .header-banner-wrapper .navbar-mobile .bottom-links h3 {
     margin-bottom: 20px;
+  }
+  .header-banner-wrapper .navbar-mobile .navbar-mobile-footer {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: center;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid lightgray;
+  }
+  .header-banner-wrapper .navbar-mobile .navbar-mobile-footer svg {
+    width: 25px;
+    height: 25px;
   }
   main .main-div h2 {
     font-size: 30px;
@@ -445,8 +593,9 @@ main .floating-link-window .floating-link-btn {
     transform: translate(0px, -50%);
     background: rgba(255, 255, 255, 0.7098039216);
     padding: 20px;
+    right: 0 !important;
     border-radius: 8px;
-    transform: translate(200px, -50%);
+    transform: translate(240px, -50%);
   }
   main .floating-link-btn {
     display: block !important;
@@ -461,6 +610,150 @@ main .floating-link-window .floating-link-btn {
   main .floating-link-btn button {
     background: transparent;
     border: none;
+  }
+  .coupon-wrapper {
+    position: fixed;
+    left: 0;
+    bottom: 50%;
+    z-index: 10;
+  }
+  .coupon-wrapper .coupon-btn-wrapper {
+    left: -51px;
+    transform: translateY(-50%) rotate(270deg);
+  }
+  .coupon-wrapper .coupon-btn-wrapper .coupon-btn {
+    padding: 5px 30px;
+    font-size: 20px;
+    width: 135px;
+  }
+  .coupon-wrapper .coupon {
+    position: absolute;
+    top: 0;
+    left: -360px;
+  }
+  .coupon-wrapper .coupon img {
+    width: 360px;
+    height: 170px;
+  }
+  .coupon-wrapper .coupon.active {
+    left: 0px;
+  }
+  .coupon-wrapper .coupon .text-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+  }
+  .coupon-wrapper .coupon .text-wrapper .left {
+    transform: rotate(270deg);
+  }
+  .coupon-wrapper .coupon .text-wrapper .left h4 {
+    text-align: center;
+    font-size: 14px;
+    line-height: 12px;
+  }
+  .coupon-wrapper .coupon .text-wrapper .left p {
+    font-size: 60px;
+    -webkit-text-stroke-color: #ca192e;
+    -webkit-text-stroke-width: 1px;
+    color: transparent;
+    font-family: fantasy;
+    text-align: center;
+    line-height: 60px;
+  }
+  .coupon-wrapper .coupon .text-wrapper .right {
+    color: #fff;
+    width: 80%;
+    margin-left: 0 !important;
+  }
+  .coupon-wrapper .coupon .text-wrapper .right h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+  .coupon-wrapper .coupon .text-wrapper .right .coupon-text {
+    font-size: 48px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-stroke-width: 1px;
+    color: transparent;
+    font-family: fantasy;
+    text-align: center;
+  }
+  .coupon-wrapper .coupon .text-wrapper .right .validity {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+  }
+  footer .first {
+    flex-direction: column !important;
+  }
+  footer .first .left {
+    flex-direction: column !important;
+    align-items: flex-start;
+  }
+  footer .first .left p {
+    font-size: 10px !important;
+    width: 100% !important;
+  }
+  footer .first .left h2 {
+    font-size: 18px !important;
+    width: 100% !important;
+  }
+  footer .first .left input {
+    margin-left: 0 !important;
+  }
+  footer .first .left .d-flex:first-child {
+    margin-bottom: 20px;
+  }
+  footer .first .left button {
+    margin-left: 5px !important;
+  }
+  footer .first .left .mobile-email-btn {
+    display: block !important;
+    padding: 3px 0 0 !important;
+    width: 60px !important;
+  }
+  footer .first .left .mobile-email-btn svg {
+    fill: #fff;
+    width: 30px;
+    height: 30px;
+  }
+  footer .first .left .desktop-email-btn {
+    display: none !important;
+  }
+  footer .first .left .d-flex:nth-child(2) {
+    align-self: center;
+  }
+  footer .first .right {
+    margin-top: 40px;
+  }
+  footer .first .right svg {
+    margin-left: 25px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+  footer .first .right svg:first-child {
+    margin-left: 0 !important;
+  }
+  footer .second .left ul {
+    margin-bottom: 40px;
+    width: 47%;
+  }
+  footer .second .left ul li {
+    font-size: 13px !important;
+    line-height: 28px !important;
+  }
+  footer .second .right {
+    width: 100%;
+    justify-content: center !important;
+  }
+  footer .third p:last-child {
+    width: 100% !important;
+    font-size: 10px !important;
   }
 }
 footer {
@@ -488,18 +781,18 @@ footer .first .left input {
   outline: none;
   transition: all 0.3s ease-in-out;
   width: 100%;
-  height: 48px;
+  height: 46px;
   padding: 0 24px;
   font-size: 14px;
   line-height: 22px;
-  width: 300px;
+  width: 200px;
   margin-left: 40px;
 }
 footer .first .left button {
   font-size: 14px;
   height: 48px;
-  width: 120px;
-  padding: 12px 24px;
+  width: 100px;
+  padding: 12px 12px;
   line-height: 14px;
   color: #fff;
   background-color: #111;
@@ -507,6 +800,12 @@ footer .first .left button {
   border: 2px solid #d17c0c;
   cursor: pointer;
   margin-left: 30px;
+}
+footer .first .left button.mobile-email-btn {
+  display: none;
+}
+footer .first .left button.desktop-email-btn {
+  display: block;
 }
 footer .first .right svg {
   width: 20px;
@@ -517,6 +816,9 @@ footer .first .right svg {
 footer .second {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+footer .second .left {
+  flex-wrap: wrap;
 }
 footer .second .left ul h3 {
   color: #d17c0c;
