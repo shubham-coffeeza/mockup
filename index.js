@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('scroll', function() {
         var targetElement = document.querySelector('header');
         var currentScrollPosition = window.scrollY;
-        if (currentScrollPosition > 10) {
+        if (currentScrollPosition > 36) {
             targetElement.classList.add('scrolled');
         } else {
             targetElement.classList.remove('scrolled');
