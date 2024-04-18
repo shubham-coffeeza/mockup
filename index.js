@@ -210,5 +210,87 @@ document.querySelector(".brand-wrapper").addEventListener("touchstart", startDra
 document.querySelector(".brand-wrapper").addEventListener("touchmove", drag);
 document.querySelector(".brand-wrapper").addEventListener("touchend", endDrag);
 //Brand Slider
+
+//Press Slider
+let currentSlidePress = 0;
+const slidesPress = document.querySelectorAll(".press");
+const totalSlidesPress = slidesPress.length/2;
+const slideWidthPress = slidesPress[0].clientWidth;
+let startSliderXPress = 0;
+let endXPress = 0;
+
+//Show slide by index
+function showSlide(index) {
+  moveSlide(index);
+}
+
+//use transform for slidesPress
+function moveSlide(index) {
+  const slideOffset = -index * slideWidthPress;
+  if(isMobileDevice()){
+    document.querySelector(".press-wrapper").style.transform = `translateX(${slideOffset*2.5}px)`;
+  }
+  else
+    document.querySelector(".press-wrapper").style.transform = `translateX(${slideOffset}px)`;
+}
+
+function nextSlide() {
+  currentSlidePress = (currentSlidePress + 1) % totalSlidesPress;
+  showSlide(currentSlidePress);
+  // If the next slide is the first slide, reset the transform to ensure looping
+  if (currentSlidePress === (totalSlidesPress/2)) {
+    setTimeout(() => {
+    //   document.querySelector(".brand-wrapper").style.transition = 'none';
+      document.querySelector(".press-wrapper").style.transform = `translateX(0px)`;
+      setTimeout(() => {
+        document.querySelector(".press-wrapper").style.transition = '';
+      }, 50);
+    }, 500);
+  }
+}
+
+function prevSlide() {
+  currentSlidePress = (currentSlidePress - 1 + totalSlidesPress) % totalSlidesPress;
+  showSlide(currentSlidePress);
+
+  // If the previous slide is the last slide, reset the transform to ensure looping
+  if (currentSlidePress === totalSlidesPress - 1) {
+    setTimeout(() => {
+    //   document.querySelector(".brand-wrapper").style.transition = 'none';
+      document.querySelector(".press-wrapper").style.transform = `translateX(-${totalSlidesPress-1 * slideWidthPress}px)`;
+      setTimeout(() => {
+        document.querySelector(".press-wrapper").style.transition = '';
+      }, 50);
+    }, 500);
+  }
+}
+
+document.querySelector(".press-prev").addEventListener("click", prevSlide);
+document.querySelector(".press-next").addEventListener("click", nextSlide);
+
+//Drag functionality for touch screens
+function startDrag(event) {
+  startSliderXPress = event.touches[0].clientX;
+}
+
+function drag(event) {
+  endXPress = event.touches[0].clientX;
+}
+
+function endDrag() {
+  const sensitivity = 50; // Adjust this value to control the sensitivity of the drag
+  const dragDistance = startSliderXPress - endXPress;
+
+  if (dragDistance > sensitivity) {
+    nextSlide(); // Move to next slide
+  } else if (dragDistance < -sensitivity) {
+    prevSlide(); // Move to previous slide
+  }
+}
+
+document.querySelector(".press-wrapper").addEventListener("touchstart", startDrag);
+document.querySelector(".press-wrapper").addEventListener("touchmove", drag);
+document.querySelector(".press-wrapper").addEventListener("touchend", endDrag);
+//press Slider
     
 });

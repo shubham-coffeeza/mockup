@@ -2,6 +2,22 @@
   font-family: "montserrat";
   src: url("./m.ttf");
 }
+@font-face {
+  font-family: "allura";
+  src: url("./Allura-Regular.ttf");
+}
+@font-face {
+  font-family: "dscript";
+  src: url("./DancingScript-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "kscript";
+  src: url("./KaushanScript-Regular.ttf");
+}
+@font-face {
+  font-family: "merienda";
+  src: url("./Merienda-VariableFont_wght.ttf");
+}
 body {
   font-family: montserrat;
 }
@@ -227,14 +243,29 @@ body {
   height: 38px;
 }
 
+main .main-div {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .main-div .main-div-inside {
+  width: 100%;
+}
 main .main-div h2 {
   text-align: center;
-  padding: 30px 0;
-  font-size: 28px;
+  padding: 0 0 30px 0;
+  font-size: 62px;
   font-weight: 300;
   opacity: 0.7;
-  text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
+  font-family: "kscript";
+}
+main .main-div h2:nth-child(2) {
+  font-family: "montserrat";
+  font-weight: 500;
+  text-transform: capitalize;
 }
 main .floating-link-window {
   position: fixed;
@@ -278,12 +309,6 @@ main .floating-link-window .link a {
 }
 main .floating-link-window .floating-link-btn {
   display: none;
-}
-main .categories {
-  padding: 100px 0;
-}
-main .categories h2 {
-  text-transform: uppercase;
 }
 main .categories .categories-wrapper {
   display: grid;
@@ -356,6 +381,9 @@ main .brands {
 main .brands .brand-btn-wrapper {
   position: relative;
 }
+main .brands h2 {
+  font-family: "kscript";
+}
 main .brands .brand-wrapper {
   display: flex;
   align-items: center;
@@ -365,7 +393,7 @@ main .brands .brand-wrapper {
 main .brands .brand-wrapper .brand {
   margin-right: 40px;
   border-radius: 50%;
-  width: 180px;
+  width: 100px;
   background-color: #d2d2d2;
   height: 100px;
   padding: 20px;
@@ -859,6 +887,9 @@ footer .third p:last-child {
     width: 25px;
     height: 25px;
   }
+  main .main-div {
+    min-height: 80vh;
+  }
   main .main-div h2 {
     font-size: 30px;
   }
@@ -873,29 +904,24 @@ footer .third p:last-child {
   }
   main .main-div.categories .categories-wrapper .category img {
     opacity: 70%;
+    width: 100px;
   }
   main .main-div.categories .categories-wrapper .category h3 {
     font-size: 10px;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     margin-top: 10px;
-    background: #333333;
-    padding: 2px 0px;
-    position: absolute;
-    top: 40%;
-    color: #fff;
-    border-radius: 22px;
-    transform: translateY(-50%);
+    width: 90%;
   }
-  main .main-div.f-width-img {
+  main .f-width-img {
     background-position-x: center;
   }
-  main .main-div.f-width-img .text-wrapper h2 {
+  main .f-width-img .text-wrapper h2 {
     font-size: 18px;
     letter-spacing: 2px;
     margin-bottom: 20px;
     width: 85%;
   }
-  main .main-div.f-width-img .text-wrapper p {
+  main .f-width-img .text-wrapper p {
     font-size: 13px;
     margin-bottom: 30px;
     width: 85%;

@@ -2,6 +2,22 @@
     font-family: "montserrat";
     src: url('./m.ttf');
 }
+@font-face {
+    font-family: "allura";
+    src: url('./Allura-Regular.ttf');
+}
+@font-face {
+    font-family: "dscript";
+    src: url('./DancingScript-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: "kscript";
+    src: url('./KaushanScript-Regular.ttf');
+}
+@font-face {
+    font-family: "merienda";
+    src: url('./Merienda-VariableFont_wght.ttf');
+}
 
 body{
     // font-family: sans-serif;
@@ -241,7 +257,14 @@ body{
 main{
     .main-div{
         // padding-top: 100px;
-        // min-height: 120vh;
+        min-height: calc(100vh - 100px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .main-div-inside{
+            width: 100%;
+        }
         &:nth-child(odd){
             // background-color: bisque;
         }
@@ -250,12 +273,18 @@ main{
         }
         h2{
             text-align: center;
-            padding: 30px 0;
-            font-size: 28px;
+            padding: 0 0 30px 0;
+            font-size: 62px;
             font-weight: 300;
             opacity: 0.7;
-            text-transform: uppercase;
-            letter-spacing: 4px;
+            // text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: "kscript";
+            &:nth-child(2){
+                font-family: "montserrat";
+                font-weight: 500;
+                text-transform: capitalize;
+            }
         }
     }
     .floating-link-window{
@@ -305,9 +334,9 @@ main{
         }
     }
     .categories{
-        padding: 100px 0;
+        // padding: 50px 0 100px;
         h2{
-            text-transform: uppercase;
+            // text-transform: uppercase;
         }
         .categories-wrapper{
             display: grid;
@@ -380,7 +409,7 @@ main{
             position: relative;
         }
         h2{
-
+            font-family: "kscript";
         }
         .brand-wrapper{
             display: flex;
@@ -392,7 +421,7 @@ main{
             .brand{
                 margin-right: 40px;
                 border-radius: 50%;
-                width: 180px;
+                width: 100px;
                 background-color: #d2d2d2;
                 height: 100px;
                 padding: 20px;
@@ -920,6 +949,7 @@ footer{
     }
     main{
         .main-div{
+            min-height: 80vh;
             h2{
                 font-size: 30px;
             }
@@ -932,42 +962,52 @@ footer{
                         position: relative;
                         img{
                             opacity: 70%;
+                            width: 100px;
                         }
+                        // h3{
+                        //     font-size: 10px;
+                        //     letter-spacing: 0px;
+                        //     margin-top: 0;
+                        //     background: #333333;
+                        //     padding: 5px 5px;
+                        //     position: absolute;
+                        //     top: 50%;
+                        //     left: 50%;
+                        //     width: 90%;
+                        //     color: #fff;
+                        //     border-radius: 22px;
+                        //     transform: translate(-50%, -50%);
+
+                        // }
                         h3{
                             font-size: 10px;
-                            letter-spacing: 2px;
+                            letter-spacing: 0px;
                             margin-top: 10px;
-                            background: #333333;
-                            padding: 2px 0px;
-                            position: absolute;
-                            top: 40%;
-                            color: #fff;
-                            border-radius: 22px;
-                            transform: translateY(-50%);
+                            width: 90%;
 
                         }
                     }
                 }
-            }
-            &.f-width-img{
-                background-position-x: center;
-                .text-wrapper{
-                    h2{
-                        font-size: 18px;
-                        letter-spacing: 2px;
-                        margin-bottom: 20px;
-                        width: 85%;
-                    }
-                    p{
-                        font-size: 13px;
-                        margin-bottom: 30px;
-                        width: 85%;
-                    }
-                    button{
-                    }
-                } 
-            }  
+            } 
         }
+        .f-width-img{
+            background-position-x: center;
+            .text-wrapper{
+                h2{
+                    font-size: 18px;
+                    letter-spacing: 2px;
+                    margin-bottom: 20px;
+                    width: 85%;
+                }
+                p{
+                    font-size: 13px;
+                    margin-bottom: 30px;
+                    width: 85%;
+                }
+                button{
+                }
+            } 
+        } 
         .floating-link-window{
             transform: translate(0px, -50%);
             background: #ffffffb5;
