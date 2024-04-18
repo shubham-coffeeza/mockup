@@ -5,6 +5,9 @@ function isMobileDevice() {
     return /Mobile|Android/i.test(navigator.userAgent);
 }
 
+function isTabletDevice() {
+  return /iPad/i.test(navigator.userAgent) || (/(tablet|ipad|playbook|silk)|(android(?!.*mobile))/i.test(navigator.userAgent));
+}
 //screen loader start
     document.body.classList.add('loaded');
 //screen loader end
@@ -220,12 +223,12 @@ let startSliderXPress = 0;
 let endXPress = 0;
 
 //Show slide by index
-function showSlide(index) {
-  moveSlide(index);
+function showSlidePress(index) {
+  moveSlidePress(index);
 }
 
 //use transform for slidesPress
-function moveSlide(index) {
+function moveSlidePress(index) {
   const slideOffset = -index * slideWidthPress;
   if(isMobileDevice()){
     document.querySelector(".press-wrapper").style.transform = `translateX(${slideOffset*2.5}px)`;
@@ -234,9 +237,9 @@ function moveSlide(index) {
     document.querySelector(".press-wrapper").style.transform = `translateX(${slideOffset}px)`;
 }
 
-function nextSlide() {
+function nextSlidePress() {
   currentSlidePress = (currentSlidePress + 1) % totalSlidesPress;
-  showSlide(currentSlidePress);
+  showSlidePress(currentSlidePress);
   // If the next slide is the first slide, reset the transform to ensure looping
   if (currentSlidePress === (totalSlidesPress/2)) {
     setTimeout(() => {
@@ -249,9 +252,9 @@ function nextSlide() {
   }
 }
 
-function prevSlide() {
+function prevSlidePress() {
   currentSlidePress = (currentSlidePress - 1 + totalSlidesPress) % totalSlidesPress;
-  showSlide(currentSlidePress);
+  showSlidePress(currentSlidePress);
 
   // If the previous slide is the last slide, reset the transform to ensure looping
   if (currentSlidePress === totalSlidesPress - 1) {
@@ -265,32 +268,32 @@ function prevSlide() {
   }
 }
 
-document.querySelector(".press-prev").addEventListener("click", prevSlide);
-document.querySelector(".press-next").addEventListener("click", nextSlide);
+document.querySelector(".press-prev").addEventListener("click", prevSlidePress);
+document.querySelector(".press-next").addEventListener("click", nextSlidePress);
 
 //Drag functionality for touch screens
-function startDrag(event) {
+function startDragPress(event) {
   startSliderXPress = event.touches[0].clientX;
 }
 
-function drag(event) {
+function dragPress(event) {
   endXPress = event.touches[0].clientX;
 }
 
-function endDrag() {
+function endDragPress() {
   const sensitivity = 50; // Adjust this value to control the sensitivity of the drag
   const dragDistance = startSliderXPress - endXPress;
 
   if (dragDistance > sensitivity) {
-    nextSlide(); // Move to next slide
+    nextSlidePress(); // Move to next slide
   } else if (dragDistance < -sensitivity) {
-    prevSlide(); // Move to previous slide
+    prevSlidePress(); // Move to previous slide
   }
 }
 
-document.querySelector(".press-wrapper").addEventListener("touchstart", startDrag);
-document.querySelector(".press-wrapper").addEventListener("touchmove", drag);
-document.querySelector(".press-wrapper").addEventListener("touchend", endDrag);
+document.querySelector(".press-wrapper").addEventListener("touchstart", startDragPress);
+document.querySelector(".press-wrapper").addEventListener("touchmove", dragPress);
+document.querySelector(".press-wrapper").addEventListener("touchend", endDragPress);
 //press Slider
 
 //Exit intent popup
@@ -318,5 +321,32 @@ document.querySelector(".exit-intent-popup, .exit-intent-popup .close").addEvent
   localStorage.setItem("exitIntentLastClosedTime", Date.now());
 });
 //Exit intent popup
+
+//Third Section
+var parentElement = document.querySelector('.third-section');
+  var blockElement = document.querySelector('.third-section img');
+  var detailElement = document.querySelector('.details-wrapper');
+
+  window.addEventListener('scroll', function() {
+    var parentRect = parentElement.getBoundingClientRect();
+    const screenWidth = window.innerWidth;
+    function getDeviceType() {
+      if (screenWidth < 768) {
+          blockElement.style.bottom = '55%';
+      } else if (screenWidth >= 768 && screenWidth <= 1024) {
+          blockElement.style.bottom = '15%';
+      } else {
+          blockElement.style.bottom = '28%';
+      }
+    }
+    if (parentRect.top <= (screenWidth <= 1024 ? 600 : 300)) {
+      blockElement.style.bottom = '8%';
+      detailElement.style.opacity = '1';
+    } else {
+      getDeviceType();
+      detailElement.style.opacity = '0';
+    }
+  });
+//Third Section
     
 });

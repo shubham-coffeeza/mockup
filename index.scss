@@ -203,7 +203,7 @@ body{
     }
     .fix-logo-wrapper{
         position: absolute;
-        left: 30px;
+        left: 15px;
         top: 50%;
         transform: translate(0, -50%);
         h1{
@@ -242,7 +242,7 @@ body{
     }
     .scrolled .logo-wrapper, .already-scrolled .logo-wrapper{
         position: absolute;
-        left: 30px;
+        left: 15px;
         top: 50%;
         transform: translate(0, -50%);
         h1{
@@ -458,6 +458,70 @@ main{
             right: 0;
         }
     }
+    .third-section{
+        padding: 100px 0 500px;
+        background-color: #000;
+        position: relative;
+        .main-heading{
+          font-size: 36px;
+          margin-bottom: 48px;
+          line-height: 1.12;
+          font-weight: 500;
+          color: #8d8d8d;
+            // text-transform: uppercase;
+          text-align: center;
+          font-family: "kscript";
+        }
+        .details-wrapper{
+          display: grid;
+          grid-template-columns: auto auto auto;
+          column-gap: 50px;
+          opacity: 0;
+          transition: all 2s cubic-bezier(0.5, 0, 0, 1) 0s;
+          .details{
+            .heading-section{
+              display: flex;
+              align-items: center;
+              margin-bottom: 24px;
+              .number{
+                color: #8d8d8d;
+                background: transparent;
+                box-shadow: none;
+                font-size: 24px;
+                line-height: 1.35;
+                font-weight: 500;
+                width: 64px;
+                height: 64px;
+                border: 2px dashed #8d8d8d;
+                border-radius: 50%;
+                margin-right: 16px;
+                align-items: center;
+                display: inline-flex;
+                justify-content: center;
+              }
+              .heading{
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 1.35;
+                color: #8d8d8d;
+                width: calc(100% - 80px);
+              }
+            }
+            .para{
+              font-size: 16px;
+              line-height: 24px;
+              color: #8d8d8d;
+            }
+          }
+        }
+        img{
+            position: absolute;
+            bottom: 28%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 2s cubic-bezier(0.5, 0, 0, 1) 0s;
+        }
+      }
 }
 
 #loading-overlay {
@@ -772,6 +836,38 @@ footer{
                 }
             }
         }
+        .third-section{
+            padding: 100px 0 600px;
+            position: relative;
+            .main-heading{
+              font-size: 36px;
+              margin-bottom: 48px;
+            }
+            .details-wrapper{
+              .details{
+                .heading-section{
+                  .number{
+                    font-size: 16px;
+                    width: 30px;
+                    height: 30px;
+                  }
+                  .heading{
+                    font-size: 16px;
+
+                  }
+                }
+                .para{
+                  font-size: 12px;
+                  line-height: 16px;
+                  color: #8d8d8d;
+                }
+              }
+            }
+            img{
+                height: auto;
+                width: 90%;
+            }
+          }
     }    
 
     footer .first{
@@ -1067,6 +1163,40 @@ footer{
                 border: none;
             }
         }
+        .third-section{
+            padding: 100px 0 300px;
+            position: relative;
+            .main-heading{
+              font-size: 24px;
+              margin-bottom: 48px;
+            }
+            .details-wrapper{
+              grid-template-columns: auto;
+              .details{
+                margin-bottom: 30px;
+                .heading-section{
+                    margin-bottom: 5px;
+                  .number{
+                    font-size: 16px;
+                    width: 30px;
+                    height: 30px;
+                  }
+                  .heading{
+                    font-size: 16px;
+
+                  }
+                }
+                .para{
+                  font-size: 12px;
+                  line-height: 16px;
+                  color: #8d8d8d;
+                }
+              }
+            }
+            img{
+                bottom: 55%;
+            }
+          }
     } 
     .coupon-wrapper{
         left: -60px;
