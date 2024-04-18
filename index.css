@@ -71,6 +71,10 @@ body {
   display: block;
 }
 
+.relative {
+  position: relative;
+}
+
 .container {
   max-width: 100%;
   margin-right: auto;
@@ -566,6 +570,31 @@ main .brands .next {
   100% {
     background: #af5661;
   }
+}
+
+.exit-intent-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  background: rgba(128, 128, 128, 0.7215686275);
+}
+.exit-intent-popup .close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.exit-intent-popup .close .close-btn {
+  fill: #fff;
 }
 
 footer {

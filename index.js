@@ -292,5 +292,31 @@ document.querySelector(".press-wrapper").addEventListener("touchstart", startDra
 document.querySelector(".press-wrapper").addEventListener("touchmove", drag);
 document.querySelector(".press-wrapper").addEventListener("touchend", endDrag);
 //press Slider
+
+//Exit intent popup
+// Check if the exit intent popup has been shown in the last 5 hours
+function canShowExitIntentPopup() {
+  var lastClosedTime = localStorage.getItem("exitIntentLastClosedTime");
+  if (!lastClosedTime) {
+      return true; // Popup has not been closed before
+  } else {
+      var fiveHoursAgo = Date.now() - (5 * 60 * 60 * 1000); // Calculate the time 5 hours ago
+      return parseInt(lastClosedTime) < fiveHoursAgo;
+  }
+}
+
+document.addEventListener("mouseleave", function(event) {
+  if (event.clientY < 0 && canShowExitIntentPopup()) {
+      document.querySelector(".exit-intent-popup").style.display = "flex";
+  }
+});
+
+document.querySelector(".exit-intent-popup, .exit-intent-popup .close").addEventListener("click", function(){
+  document.querySelector(".exit-intent-popup").style.display = "none";
+  
+  // Save the current time when the popup is closed
+  localStorage.setItem("exitIntentLastClosedTime", Date.now());
+});
+//Exit intent popup
     
 });
