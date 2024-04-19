@@ -411,10 +411,14 @@ main{
     }  
     .brands{
         position: relative;
-        overflow: hidden;
-        min-height: 50vh;
+        // overflow: hidden;
+        min-height: 70vh;
         .brand-btn-wrapper{
             position: relative;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            cursor: pointer;
         }
         h2{
             font-family: "kscript";
@@ -425,7 +429,7 @@ main{
             // justify-content: flex-start;
             // column-gap: 60px;
             width: 100%;
-            transition: transform 1s cubic-bezier(0.5, 0, 0, 1) 0s;
+            transition: transform 1s ease-in-out;
             .brand{
                 margin-right: 40px;
                 border-radius: 50%;
@@ -447,7 +451,7 @@ main{
             top: 50%;
             transform: translateY(-50%);
             background-color: rgba(0, 0, 0, 0);
-            color: #878787;
+            color: #585757;
             font-size: 60px;
             border: none;
             cursor: pointer;
@@ -457,11 +461,27 @@ main{
         
         .prev {
             left: 0;
+            animation: slider-btn-left 2s linear infinite;
         }
         
         .next {
             right: 0;
+            animation: slider-btn-right 2s linear infinite;
         }
+    }
+    @keyframes slider-btn-left {
+        0% { opacity: 0.1; left: 30px;}
+        25% { opacity: 0.45; left: 20px; }
+        50% { opacity: 0.65; left: 10px; }
+        75% { opacity: 0.85; left: 0px; }
+        100% { opacity: 0.1; left: 30px; }
+    }
+    @keyframes slider-btn-right {
+        0% { opacity: 0.1; right: 30px;}
+        25% { opacity: 0.45; right: 20px; }
+        50% { opacity: 0.65; right: 10px; }
+        75% { opacity: 0.85; right: 0px; }
+        100% { opacity: 0.1; right: 30px; }
     }
     .third-section{
         padding: 100px 0 500px;
