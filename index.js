@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //floating link start
   var isOpen = false;
-  var startX, startY;
+  var startXFloat, startY;
   var threshold = 50; // Minimum distance to be considered a swipe
   
   // Event listener for the floating link button click
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
   // Event listener for touch start
   document.querySelector(".floating-link-btn").addEventListener("touchstart", function(e) {
-      startX = e.touches[0].clientX;
+      startXFloat = e.touches[0].clientX;
       startY = e.touches[0].clientY;
   });
   
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
       var endX = e.changedTouches[0].clientX;
       var endY = e.changedTouches[0].clientY;
       
-      var deltaX = endX - startX;
+      var deltaX = endX - startXFloat;
       var deltaY = endY - startY;
       
       // Check if the swipe is horizontal and greater than the threshold
@@ -130,50 +130,82 @@ document.addEventListener("DOMContentLoaded", function() {
 //hamburger
 
 
-//brands slider
-const container = document.querySelector('.brand-wrapper');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
+//Best rated slider
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".testimonial.slide");
+  const totalSlides = slides.length;
+  const slideWidth = slides[0].clientWidth;
+  let startX = 0;
+  let endX = 0;
 
-// Function to scroll the container to the left
-function scrollLeft() {
-  container.scrollBy({
-    left: -container.offsetWidth, // Scroll by one container width
-    behavior: 'smooth'
+  //One dot for each slide
+  slides.forEach((slide, index) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (index === 0) {
+      dot.classList.add("active");
+    }
+    dot.addEventListener("click", () => {
+      showSlide(index);
+    });
+    document.querySelector(".counter").appendChild(dot);
   });
-}
 
-// Function to scroll the container to the right
-function scrollRight() {
-  container.scrollBy({
-    left: container.offsetWidth, // Scroll by one container width
-    behavior: 'smooth'
-  });
-}
+  //Show slide by index
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        document.querySelector(".counter").children[i].classList.add("active");
+      } else {
+        document.querySelector(".counter").children[i].classList.remove("active");
+      }
+    });
+    moveSlide(index);
+  }
 
-// Event listeners for navigation buttons
-prevBtn.addEventListener('click', scrollLeft);
-nextBtn.addEventListener('click', scrollRight);
+  //use transform for slides
+  function moveSlide(index) {
+    const slideOffset = -index * slideWidth;
+    document.querySelector(".slides").style.transform = `translateX(${slideOffset}px)`;
+  }
 
-// Automatic scrolling
-const scrollInterval = 3000; // Interval in milliseconds
-let scrollTimer;
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }
 
-function startAutoScroll() {
-  scrollTimer = setInterval(scrollRight, scrollInterval);
-}
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+  }
 
-function stopAutoScroll() {
-  clearInterval(scrollTimer);
-}
+  document.querySelector(".best-rated-prev").addEventListener("click", prevSlide);
+  document.querySelector(".best-rated-next").addEventListener("click", nextSlide);
 
-// Start auto-scrolling
-startAutoScroll();
+  //Drag functionality for touch screens
+  function startDrag(event) {
+    startX = event.touches[0].clientX;
+  }
 
-// Pause auto-scrolling when hovering over the container
-container.addEventListener('mouseenter', stopAutoScroll);
-container.addEventListener('mouseleave', startAutoScroll);
-//brands slider
+  function drag(event) {
+    endX = event.touches[0].clientX;
+  }
+
+  function endDrag() {
+    const sensitivity = 50; // Adjust this value to control the sensitivity of the drag
+    const dragDistance = startX - endX;
+
+    if (dragDistance > sensitivity) {
+      nextSlide(); // Move to next slide
+    } else if (dragDistance < -sensitivity) {
+      prevSlide(); // Move to previous slide
+    }
+  }
+
+  document.querySelector(".slides").addEventListener("touchstart", startDrag);
+  document.querySelector(".slides").addEventListener("touchmove", drag);
+  document.querySelector(".slides").addEventListener("touchend", endDrag);
+//Best rated slider
 
 //Exit intent popup
   // Check if the exit intent popup has been shown in the last 5 hours
