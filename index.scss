@@ -263,7 +263,7 @@ body{
 
 main{
     .main-div{
-        padding: 50px 0;
+        padding: 100px 0;
         min-height: calc(100vh - 100px);
         display: flex;
         align-items: center;
@@ -723,6 +723,74 @@ main{
             }
         }    
     }
+    .blogs-wrapper{
+        .blogs{
+            .blog-one{
+                background: url("./homepage/imgpsh_fullsize_anim\ \(2\).png");
+                height: 400px;
+                background-size: cover;
+                width: 100%;
+                position: relative;
+                border-radius: 8px;
+                margin-bottom: 40px;
+                .inner{
+                    button{
+                        border: none;
+                        padding: 8px 20px;
+                        font-size: 18px;
+                        border-radius: 4px;
+                        background: #ac363a;
+                        color: #fff;
+                        position: absolute;
+                        bottom: 35px;
+                        left: 135px;
+                    }
+                }
+            }
+            .d-grid{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 40px;
+            }
+            .blog-two, .blog-three, .blog-four{
+                background: #fff;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                border-radius: 8px;
+                img{
+                    border-radius: 8px 8px 0 0;
+                    width: 100% ;
+                    height: 200px;
+                }
+                .text-content{
+                    padding: 15px;
+                } 
+                p{
+                    margin: 20px 0 10px;
+                }
+                button{
+                    border: none;
+                    padding: 4px 15px;
+                    font-size: 14px;
+                    border-radius: 4px;
+                    background: #ac363a;
+                    color: #fff;
+                    float: right;
+                    clear: both;
+                    margin-bottom: 20px;
+                }
+            } 
+            .all-blogs{
+                border: none;
+                padding: 10px 35px;
+                font-size: 18px;
+                border-radius: 4px;
+                background: #ac363a;
+                color: #fff;
+                margin: 50px auto 0;
+                display: block;
+            }
+        }  
+    }  
 }
 
 #loading-overlay {
@@ -1613,6 +1681,7 @@ footer{
     }
     main{
         .main-div{
+            padding: 50px 0;
             min-height: 80vh;
             h2{
                 font-size: 30px;
@@ -1807,6 +1876,35 @@ footer{
                 }
             }    
         }
+        .blogs-wrapper{
+            .blogs{
+                .all-blogs{
+
+                }
+                .blog-one{
+                    height: 150px;
+                    margin-bottom: 30px;
+                    border-radius: 0;
+                    .inner{
+                        button{
+                            padding: 5px 12px;
+                            font-size: 12px;
+                            border-radius: 4px;
+                            bottom: 15px;
+                            left: 25px;
+                        }
+                    }
+                }
+                .d-grid{
+                    grid-template-columns: auto;
+                    gap: 40px;
+                    padding: 0 16px;
+                }
+                .blog-three, .blog-four{
+                    display: none;
+                } 
+            }  
+        } 
     } 
     .coupon-wrapper{
         left: -60px;
