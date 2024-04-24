@@ -678,6 +678,29 @@ main .bestseller-wrapper .details button {
   margin-top: 40px;
   color: #fff;
 }
+main .instagram h2 {
+  padding-bottom: 60px;
+}
+main .instagram p {
+  text-align: center;
+  line-height: 28px;
+}
+main .instagram .insta-wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 40px;
+  row-gap: 2px;
+}
+main .instagram .insta-wrapper .insta-post {
+  width: 100%;
+  height: 470px;
+  overflow: hidden;
+}
+main .instagram .insta-wrapper .insta-post .instagram-media {
+  margin-top: -55px !important;
+  max-width: unset !important;
+  min-width: unset !important;
+}
 
 #loading-overlay {
   position: fixed;
@@ -1043,6 +1066,11 @@ footer .third p:last-child {
   color: #fff;
 }
 
+@media screen and (max-width: 1200px) {
+  main .instagram .insta-wrapper .insta-post {
+    height: 405px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .header-banner-wrapper header .container {
     justify-content: space-between;
@@ -1255,6 +1283,12 @@ footer .third p:last-child {
   main .bestseller-wrapper .details button {
     margin-top: 40px;
   }
+  main .instagram .insta-wrapper .insta-post {
+    height: 405px;
+  }
+  main .instagram .insta-wrapper .insta-post .instagram-media {
+    margin-left: -8px !important;
+  }
   footer .first .left p {
     font-size: 10px !important;
     width: 240px !important;
@@ -1265,6 +1299,16 @@ footer .third p:last-child {
   }
   footer .first .right svg {
     margin-left: 15px;
+  }
+}
+@media screen and (max-width: 992px) {
+  main .instagram .insta-wrapper .insta-post {
+    height: 305px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .instagram .insta-wrapper .insta-post {
+    height: 230px;
   }
 }
 @media screen and (max-width: 545px) {
@@ -1595,6 +1639,18 @@ footer .third p:last-child {
   }
   main .bestseller-wrapper .details .secondary {
     font-size: 60px;
+  }
+  main .instagram {
+    padding: 50px 16px !important;
+  }
+  main .instagram .insta-wrapper {
+    grid-template-columns: auto auto;
+  }
+  main .instagram .insta-wrapper .insta-post {
+    height: 228px;
+  }
+  main .instagram .insta-wrapper .insta-post:nth-child(5), main .instagram .insta-wrapper .insta-post:last-child {
+    display: none;
   }
   .coupon-wrapper {
     left: -60px;

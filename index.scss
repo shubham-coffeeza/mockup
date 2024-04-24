@@ -698,6 +698,31 @@ main{
             }
         }  
     }
+    .instagram{
+        h2{
+            padding-bottom: 60px;
+        }
+        p{
+            text-align: center;
+            line-height: 28px;
+        }
+        .insta-wrapper{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            margin-top: 40px;
+            row-gap: 2px;
+            .insta-post{
+                width: 100%;
+                height: 470px;
+                overflow: hidden;
+                .instagram-media{
+                    margin-top: -55px !important;
+                    max-width: unset !important;
+                    min-width: unset !important;
+                }
+            }
+        }    
+    }
 }
 
 #loading-overlay {
@@ -1077,7 +1102,19 @@ footer{
             }
         }
     }
-}                    
+}     
+
+@media screen and (max-width: 1200px){
+    main{
+        .instagram{
+            .insta-wrapper{
+                .insta-post{
+                    height: 405px;
+                }
+            }    
+        }
+    }
+}
 
 @media screen and (max-width: 1024px){
     .header-banner-wrapper{
@@ -1334,6 +1371,16 @@ footer{
                 }
             }  
         }
+        .instagram{
+            .insta-wrapper{
+                .insta-post{
+                    height: 405px;
+                    .instagram-media{
+                        margin-left: -8px !important;
+                    }
+                }
+            }    
+        }
     }    
 
     footer .first{
@@ -1351,6 +1398,30 @@ footer{
             margin-left: 15px;
         }
     } 
+}
+
+@media screen and (max-width: 992px){
+    main{
+        .instagram{
+            .insta-wrapper{
+                .insta-post{
+                    height: 305px;
+                }
+            }    
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    main{
+        .instagram{
+            .insta-wrapper{
+                .insta-post{
+                    height: 230px;
+                }
+            }    
+        }
+    }
 }
 
 @media screen and (max-width: 545px){
@@ -1722,13 +1793,19 @@ footer{
                 .secondary{
                     font-size: 60px;
                 }
-                p{
-    
-                }
-                button{
-
-                }
             }  
+        }
+        .instagram{
+            padding: 50px 16px !important;
+            .insta-wrapper{
+                grid-template-columns: auto auto;
+                .insta-post{
+                    height: 228px;
+                    &:nth-child(5), &:last-child{
+                        display: none;
+                    }
+                }
+            }    
         }
     } 
     .coupon-wrapper{

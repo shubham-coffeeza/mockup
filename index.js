@@ -288,4 +288,7 @@ function checkViewportVisibility() {
 
 checkViewportVisibility();
 //Visibility in viewport
+
+//Instagram Reels
+//Instagram Reels
 });
