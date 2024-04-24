@@ -632,6 +632,52 @@ main .video-bg .main-div-inside video {
   -o-object-fit: cover;
      object-fit: cover;
 }
+main .bestseller-wrapper {
+  background: #000227;
+  color: #72c8f7;
+  padding: 100px 0;
+  position: relative;
+}
+main .bestseller-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .bestseller-wrapper .primary-title {
+  font-family: "montserrat";
+  font-weight: 600;
+  line-height: 1;
+  font-size: 30px;
+  text-align: left;
+}
+main .bestseller-wrapper img {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  z-index: 1;
+}
+main .bestseller-wrapper .details {
+  width: 50%;
+}
+main .bestseller-wrapper .details .secondary {
+  font-family: sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  font-size: 100px;
+  text-align: left;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #72c8f7;
+  color: transparent;
+  letter-spacing: 0;
+}
+main .bestseller-wrapper .details button {
+  background: #72c8f7;
+  border: #72c8f7;
+  padding: 10px 20px;
+  margin-top: 40px;
+  color: #fff;
+}
 
 #loading-overlay {
   position: fixed;
@@ -1194,6 +1240,21 @@ footer .third p:last-child {
   main .best-rated-wrapper .main-div-inside .best-rated-products .best-product .title {
     font-size: 170px;
   }
+  main .bestseller-wrapper .primary-title {
+    font-size: 30px;
+  }
+  main .bestseller-wrapper img {
+    height: 400px;
+  }
+  main .bestseller-wrapper .details {
+    width: 50%;
+  }
+  main .bestseller-wrapper .details .secondary {
+    font-size: 70px;
+  }
+  main .bestseller-wrapper .details button {
+    margin-top: 40px;
+  }
   footer .first .left p {
     font-size: 10px !important;
     width: 240px !important;
@@ -1508,6 +1569,32 @@ footer .third p:last-child {
   }
   main .brands {
     min-height: 50vh;
+  }
+  main .bestseller-wrapper {
+    padding: 50px 0;
+  }
+  main .bestseller-wrapper .container {
+    flex-direction: column;
+  }
+  main .bestseller-wrapper .primary-title {
+    font-family: "montserrat";
+    font-weight: 600;
+    line-height: 1;
+    font-size: 30px;
+    text-align: left;
+  }
+  main .bestseller-wrapper img {
+    width: 100%;
+    height: 320px;
+    left: 50%;
+    top: 38%;
+  }
+  main .bestseller-wrapper .details {
+    width: 100%;
+    margin-top: 300px;
+  }
+  main .bestseller-wrapper .details .secondary {
+    font-size: 60px;
   }
   .coupon-wrapper {
     left: -60px;

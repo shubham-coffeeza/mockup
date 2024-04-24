@@ -649,6 +649,55 @@ main{
             }
         }
     }
+    .bestseller-wrapper{
+        background: #000227;
+        color: #72c8f7;
+        padding: 100px 0;
+        position: relative;
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .primary-title{
+            font-family: 'montserrat';
+            font-weight: 600;
+            line-height: 1;
+            font-size: 30px;
+            text-align: left;
+        }   
+        img{
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            transform: translate(-50%, -50%) rotateY(180deg);
+            z-index: 1;
+        }
+        .details{
+            width: 50%;
+            .secondary{
+                font-family: sans-serif;
+                font-weight: 800;
+                line-height: 1;
+                font-size: 100px;
+                text-align: left;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: #72c8f7;
+                color: transparent;
+                letter-spacing: 0;
+            }
+            p{
+
+            }
+            button{
+                background: #72c8f7;
+                border: #72c8f7;
+                padding: 10px 20px;
+                margin-top: 40px;
+                color: #fff;
+            }
+        }  
+    }
 }
 
 #loading-overlay {
@@ -1268,6 +1317,23 @@ footer{
                 }
             }
         }
+        .bestseller-wrapper{
+            .primary-title{
+                font-size: 30px;
+            }   
+            img{
+                height: 400px;
+            }
+            .details{
+                width: 50%;
+                .secondary{
+                    font-size: 70px;
+                }
+                button{
+                    margin-top: 40px;
+                }
+            }  
+        }
     }    
 
     footer .first{
@@ -1631,6 +1697,38 @@ footer{
         }
         .brands{
             min-height: 50vh;
+        }
+        .bestseller-wrapper{
+            padding: 50px 0;
+            .container{
+                flex-direction: column;
+            }
+            .primary-title{
+                font-family: 'montserrat';
+                font-weight: 600;
+                line-height: 1;
+                font-size: 30px;
+                text-align: left;
+            }   
+            img{
+                width: 100%;
+                height: 320px;
+                left: 50%;
+                top: 38%;
+            }
+            .details{
+                width: 100%;
+                margin-top: 300px;
+                .secondary{
+                    font-size: 60px;
+                }
+                p{
+    
+                }
+                button{
+
+                }
+            }  
         }
     } 
     .coupon-wrapper{
