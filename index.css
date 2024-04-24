@@ -267,7 +267,6 @@ main .main-div h2 {
   padding: 0 0 30px 0;
   font-size: 62px;
   font-weight: 300;
-  opacity: 0.7;
   letter-spacing: 1px;
   font-family: "kscript";
 }
@@ -664,6 +663,81 @@ main .video-bg .main-div-inside video {
     transform: rotate(360deg);
   }
 }
+@keyframes fade-up-animation {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-left-animation {
+  0% {
+    transform: translate(-100px, -50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, -50%);
+    opacity: 1;
+  }
+}
+@keyframes fade-right-animation {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes scale-up-animation {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+@keyframes scale-down-animation {
+  0% {
+    transform: scale(2) translate(-25%, 0%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translate(-50%, 0%);
+    opacity: 1;
+  }
+}
+.viewport-active .fade-up-animation {
+  animation: fade-up-animation 1s ease-in-out;
+  opacity: 1 !important;
+}
+.viewport-active .fade-left-animation {
+  animation: fade-left-animation 1s ease-in-out;
+  opacity: 1 !important;
+}
+.viewport-active .fade-right-animation {
+  animation: fade-right-animation 1s ease-in-out;
+  opacity: 1 !important;
+}
+.viewport-active .scale-down-animation {
+  animation: scale-down-animation 1s ease-in-out;
+  opacity: 1 !important;
+}
+.viewport-active .scale-up-animation {
+  animation: scale-up-animation 1s ease-in-out;
+  opacity: 1 !important;
+}
+
+.fade-up-animation, .fade-left-animation, .fade-right-animation, .scale-up-animation, .scale-down-animation {
+  opacity: 0 !important;
+}
+
 .loaded #loading-overlay {
   display: none;
 }

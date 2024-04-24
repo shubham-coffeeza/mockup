@@ -260,4 +260,32 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 //Third Section
     
+
+//Visibility in viewport
+function checkViewportVisibility() {
+  const handleVisibility = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("viewport-active");
+        // Once an element is intersecting, we can unobserve it
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(handleVisibility, {
+    root: null, // Use the viewport as the root
+    rootMargin: "0px", // No margin around the viewport
+    threshold: 0.1 // Fire the callback when 10% of the target is visible
+  });
+
+  const elements = document.querySelectorAll(".in-viewport");
+
+  elements.forEach((element) => {
+    observer.observe(element);
+  });
+}
+
+checkViewportVisibility();
+//Visibility in viewport
 });
