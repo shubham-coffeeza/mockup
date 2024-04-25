@@ -687,17 +687,19 @@ main .instagram p {
 }
 main .instagram .insta-wrapper {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(5, 1fr);
   margin-top: 40px;
-  row-gap: 2px;
+  gap: 30px;
 }
 main .instagram .insta-wrapper .insta-post {
   width: 100%;
-  height: 470px;
+  height: 380px;
   overflow: hidden;
+  border-radius: 8px;
 }
 main .instagram .insta-wrapper .insta-post .instagram-media {
-  margin-top: -55px !important;
+  transform: scale(1.5);
+  margin-top: 30px !important;
   max-width: unset !important;
   min-width: unset !important;
 }
@@ -762,6 +764,41 @@ main .blogs-wrapper .blogs .all-blogs {
   color: #fff;
   margin: 50px auto 0;
   display: block;
+}
+main .how-to-wrapper .main-div-inside .how-to .first {
+  grid-template-columns: auto auto;
+}
+main .how-to-wrapper .main-div-inside .how-to .second {
+  margin-top: 10px;
+  grid-template-columns: auto auto auto;
+}
+main .how-to-wrapper .main-div-inside .how-to .d-grid {
+  display: grid;
+  gap: 10px;
+}
+main .how-to-wrapper .main-div-inside .how-to iframe {
+  border-radius: 8px;
+  max-width: 100%;
+}
+main .recipe-wrapper .main-div-inside .recipe .second {
+  margin-top: 10px;
+  grid-template-columns: auto auto auto;
+}
+main .recipe-wrapper .main-div-inside .recipe .second iframe {
+  border-radius: 8px;
+  max-width: 100%;
+}
+main .recipe-wrapper .main-div-inside .recipe .first, main .recipe-wrapper .main-div-inside .recipe .third {
+  margin-top: 10px;
+  grid-template-columns: auto auto auto auto;
+}
+main .recipe-wrapper .main-div-inside .recipe .first iframe, main .recipe-wrapper .main-div-inside .recipe .third iframe {
+  border-radius: 8px;
+  max-width: 100%;
+}
+main .recipe-wrapper .main-div-inside .recipe .d-grid {
+  display: grid;
+  gap: 10px;
 }
 
 #loading-overlay {
@@ -1128,9 +1165,17 @@ footer .third p:last-child {
   color: #fff;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1440px) {
   main .instagram .insta-wrapper .insta-post {
-    height: 405px;
+    height: 370px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .instagram .insta-wrapper .insta-post {
+    height: 300px;
+  }
+  .instagram .insta-wrapper .insta-post .instagram-media {
+    margin-top: 20px !important;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1345,12 +1390,6 @@ footer .third p:last-child {
   main .bestseller-wrapper .details button {
     margin-top: 40px;
   }
-  main .instagram .insta-wrapper .insta-post {
-    height: 405px;
-  }
-  main .instagram .insta-wrapper .insta-post .instagram-media {
-    margin-left: -8px !important;
-  }
   footer .first .left p {
     font-size: 10px !important;
     width: 240px !important;
@@ -1365,12 +1404,18 @@ footer .third p:last-child {
 }
 @media screen and (max-width: 992px) {
   main .instagram .insta-wrapper .insta-post {
-    height: 305px;
+    height: 220px;
+  }
+  main .instagram .insta-wrapper .insta-post .instagram-media {
+    margin-top: 6px !important;
   }
 }
 @media screen and (max-width: 768px) {
   main .instagram .insta-wrapper .insta-post {
-    height: 230px;
+    height: 150px;
+  }
+  main .instagram .insta-wrapper .insta-post .instagram-media {
+    margin-top: -2px !important;
   }
 }
 @media screen and (max-width: 545px) {
@@ -1707,13 +1752,11 @@ footer .third p:last-child {
     padding: 50px 16px !important;
   }
   main .instagram .insta-wrapper {
-    grid-template-columns: auto auto;
+    overflow-x: auto;
   }
   main .instagram .insta-wrapper .insta-post {
-    height: 228px;
-  }
-  main .instagram .insta-wrapper .insta-post:nth-child(5), main .instagram .insta-wrapper .insta-post:last-child {
-    display: none;
+    width: 250px;
+    height: 400px;
   }
   main .blogs-wrapper .blogs .blog-one {
     height: 150px;
@@ -1734,6 +1777,47 @@ footer .third p:last-child {
   }
   main .blogs-wrapper .blogs .blog-three, main .blogs-wrapper .blogs .blog-four {
     display: none;
+  }
+  main .how-to-wrapper {
+    padding: 0 16px;
+  }
+  main .how-to-wrapper .main-div-inside .how-to .first {
+    grid-template-columns: auto auto;
+  }
+  main .how-to-wrapper .main-div-inside .how-to .second {
+    margin-top: 10px;
+    grid-template-columns: auto auto auto;
+  }
+  main .how-to-wrapper .main-div-inside .how-to .d-grid {
+    display: grid;
+    gap: 10px;
+  }
+  main .how-to-wrapper .main-div-inside .how-to iframe {
+    border-radius: 8px;
+    max-width: 100%;
+  }
+  main .recipe-wrapper {
+    padding: 0 16px;
+  }
+  main .recipe-wrapper .main-div-inside .recipe .second {
+    margin-top: 10px;
+    grid-template-columns: auto auto auto;
+  }
+  main .recipe-wrapper .main-div-inside .recipe .second iframe {
+    border-radius: 8px;
+    max-width: 100%;
+  }
+  main .recipe-wrapper .main-div-inside .recipe .first, main .recipe-wrapper .main-div-inside .recipe .third {
+    margin-top: 10px;
+    grid-template-columns: auto auto auto auto;
+  }
+  main .recipe-wrapper .main-div-inside .recipe .first iframe, main .recipe-wrapper .main-div-inside .recipe .third iframe {
+    border-radius: 8px;
+    max-width: 100%;
+  }
+  main .recipe-wrapper .main-div-inside .recipe .d-grid {
+    display: grid;
+    gap: 10px;
   }
   .coupon-wrapper {
     left: -60px;
