@@ -780,6 +780,19 @@ main .how-to-wrapper .main-div-inside .how-to iframe {
   border-radius: 8px;
   max-width: 100%;
 }
+main .how-to-wrapper .main-div-inside .how-to .iframe-class {
+  position: relative;
+}
+main .how-to-wrapper .main-div-inside .how-to .iframe-class img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+}
 main .recipe-wrapper .main-div-inside .recipe .second {
   margin-top: 10px;
   grid-template-columns: auto auto auto;
@@ -799,6 +812,19 @@ main .recipe-wrapper .main-div-inside .recipe .first iframe, main .recipe-wrappe
 main .recipe-wrapper .main-div-inside .recipe .d-grid {
   display: grid;
   gap: 10px;
+}
+main .recipe-wrapper .main-div-inside .recipe .iframe-class {
+  position: relative;
+}
+main .recipe-wrapper .main-div-inside .recipe .iframe-class img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
 }
 
 #loading-overlay {
@@ -1779,14 +1805,14 @@ footer .third p:last-child {
     display: none;
   }
   main .how-to-wrapper {
-    padding: 0 16px;
+    padding: 50px 16px;
   }
   main .how-to-wrapper .main-div-inside .how-to .first {
     grid-template-columns: auto auto;
   }
   main .how-to-wrapper .main-div-inside .how-to .second {
     margin-top: 10px;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
   }
   main .how-to-wrapper .main-div-inside .how-to .d-grid {
     display: grid;
@@ -1796,8 +1822,11 @@ footer .third p:last-child {
     border-radius: 8px;
     max-width: 100%;
   }
+  main .how-to-wrapper .main-div-inside .how-to .iframe-class img {
+    display: none;
+  }
   main .recipe-wrapper {
-    padding: 0 16px;
+    padding: 50px 16px;
   }
   main .recipe-wrapper .main-div-inside .recipe .second {
     margin-top: 10px;
@@ -1809,7 +1838,7 @@ footer .third p:last-child {
   }
   main .recipe-wrapper .main-div-inside .recipe .first, main .recipe-wrapper .main-div-inside .recipe .third {
     margin-top: 10px;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto;
   }
   main .recipe-wrapper .main-div-inside .recipe .first iframe, main .recipe-wrapper .main-div-inside .recipe .third iframe {
     border-radius: 8px;
@@ -1818,6 +1847,9 @@ footer .third p:last-child {
   main .recipe-wrapper .main-div-inside .recipe .d-grid {
     display: grid;
     gap: 10px;
+  }
+  main .recipe-wrapper .main-div-inside .recipe .iframe-class img {
+    display: none;
   }
   .coupon-wrapper {
     left: -60px;
