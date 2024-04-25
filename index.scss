@@ -866,6 +866,72 @@ main{
             }    
         }
     }
+    .what-wedo-wrapper{
+        .what-wedo{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+            h2{
+                transform: rotate(270deg) translateY(-50%);
+                font-family: montserrat;
+                font-weight: 800;
+                min-width: fit-content;
+                position: absolute;
+                left: -8%;
+                top: 50%;
+                color: lightgray;
+            }
+            .mid{
+                width: 85%;
+                .top{
+                    margin-bottom: 50px;
+                    h3{
+                        color: gray;
+                    }
+                    p{
+                        font-size: 14px;
+                        width: 45%;
+                    }
+                    .inner{
+                        width: 80%; 
+                        h3{
+                            
+                        margin-bottom: 30px;
+                        }
+                    }
+                }
+                .bottom{
+                    img{
+                        width: 100%;
+                    }
+                } 
+            }
+           .float{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h3{
+                    text-align: right;
+                    font-size: 20px;
+                }
+                p{
+                    text-align: right;
+                    font-size: 16px;
+                    font-weight: 500;
+                    min-width: fit-content;
+                }
+                .d-flex{
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    
+                    margin-bottom: 30px;
+                }
+           }
+        }
+    }
+               
 }
 
 #loading-overlay {
@@ -1260,7 +1326,7 @@ footer{
 }
 
 @media screen and (max-width: 1200px){
-    .instagram{
+    main .instagram{
         .insta-wrapper{
             .insta-post{
                 height: 300px;
@@ -1526,6 +1592,11 @@ footer{
                     margin-top: 40px;
                 }
             }  
+        }
+        .blogs-wrapper{
+            .blogs .d-grid{
+                gap: 25px;
+            }
         }
     }    
 
@@ -2040,6 +2111,36 @@ footer{
                         display: none;
                     }
                 }    
+            }
+        }
+        .what-wedo-wrapper{
+            padding: 50px 16px;
+            .what-wedo{
+                flex-direction: column;
+                h2{
+                    position: static;
+                    transform: rotate(0) translate(0);
+                }
+                .mid{
+                    width: 100%; 
+                    .top{
+                        flex-direction: column;
+                        p{
+                            width: 50%;
+                        }
+                        .inner{
+                            width: 100%;
+                        }
+                    }
+                }
+               .float{  
+                    margin-top: 70px;
+                    width: 100%;
+                    align-items: center;
+                    .d-flex{
+                        align-items: center;
+                    }
+               }
             }
         }
     } 

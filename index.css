@@ -826,6 +826,67 @@ main .recipe-wrapper .main-div-inside .recipe .iframe-class img {
   bottom: 0;
   border-radius: 8px;
 }
+main .what-wedo-wrapper .what-wedo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+main .what-wedo-wrapper .what-wedo h2 {
+  transform: rotate(270deg) translateY(-50%);
+  font-family: montserrat;
+  font-weight: 800;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  position: absolute;
+  left: -8%;
+  top: 50%;
+  color: lightgray;
+}
+main .what-wedo-wrapper .what-wedo .mid {
+  width: 85%;
+}
+main .what-wedo-wrapper .what-wedo .mid .top {
+  margin-bottom: 50px;
+}
+main .what-wedo-wrapper .what-wedo .mid .top h3 {
+  color: gray;
+}
+main .what-wedo-wrapper .what-wedo .mid .top p {
+  font-size: 14px;
+  width: 45%;
+}
+main .what-wedo-wrapper .what-wedo .mid .top .inner {
+  width: 80%;
+}
+main .what-wedo-wrapper .what-wedo .mid .top .inner h3 {
+  margin-bottom: 30px;
+}
+main .what-wedo-wrapper .what-wedo .mid .bottom img {
+  width: 100%;
+}
+main .what-wedo-wrapper .what-wedo .float {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .what-wedo-wrapper .what-wedo .float h3 {
+  text-align: right;
+  font-size: 20px;
+}
+main .what-wedo-wrapper .what-wedo .float p {
+  text-align: right;
+  font-size: 16px;
+  font-weight: 500;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+main .what-wedo-wrapper .what-wedo .float .d-flex {
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
 
 #loading-overlay {
   position: fixed;
@@ -1197,10 +1258,10 @@ footer .third p:last-child {
   }
 }
 @media screen and (max-width: 1200px) {
-  .instagram .insta-wrapper .insta-post {
+  main .instagram .insta-wrapper .insta-post {
     height: 300px;
   }
-  .instagram .insta-wrapper .insta-post .instagram-media {
+  main .instagram .insta-wrapper .insta-post .instagram-media {
     margin-top: 20px !important;
   }
 }
@@ -1415,6 +1476,9 @@ footer .third p:last-child {
   }
   main .bestseller-wrapper .details button {
     margin-top: 40px;
+  }
+  main .blogs-wrapper .blogs .d-grid {
+    gap: 25px;
   }
   footer .first .left p {
     font-size: 10px !important;
@@ -1850,6 +1914,36 @@ footer .third p:last-child {
   }
   main .recipe-wrapper .main-div-inside .recipe .iframe-class img {
     display: none;
+  }
+  main .what-wedo-wrapper {
+    padding: 50px 16px;
+  }
+  main .what-wedo-wrapper .what-wedo {
+    flex-direction: column;
+  }
+  main .what-wedo-wrapper .what-wedo h2 {
+    position: static;
+    transform: rotate(0) translate(0);
+  }
+  main .what-wedo-wrapper .what-wedo .mid {
+    width: 100%;
+  }
+  main .what-wedo-wrapper .what-wedo .mid .top {
+    flex-direction: column;
+  }
+  main .what-wedo-wrapper .what-wedo .mid .top p {
+    width: 50%;
+  }
+  main .what-wedo-wrapper .what-wedo .mid .top .inner {
+    width: 100%;
+  }
+  main .what-wedo-wrapper .what-wedo .float {
+    margin-top: 70px;
+    width: 100%;
+    align-items: center;
+  }
+  main .what-wedo-wrapper .what-wedo .float .d-flex {
+    align-items: center;
   }
   .coupon-wrapper {
     left: -60px;
