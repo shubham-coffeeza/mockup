@@ -887,6 +887,77 @@ main .what-wedo-wrapper .what-wedo .float .d-flex {
   flex-direction: column;
   margin-bottom: 30px;
 }
+main .roadmap-wrapper .roadmap .desktop img {
+  width: 100%;
+}
+main .roadmap-wrapper .roadmap .mobile {
+  display: none;
+}
+main .image-collage-wrapper .image-collage {
+  width: 100%;
+  height: 500px;
+}
+main .image-collage-wrapper .image-collage .left {
+  background: url("./homepage/SummerMango_CapsuleFront_1728x.webp");
+  position: relative;
+  height: 100%;
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 5px 0 0;
+}
+main .image-collage-wrapper .image-collage .right {
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  align-items: flex-end;
+}
+main .image-collage-wrapper .image-collage .right .top {
+  background: url("./homepage/sadfs.png");
+  position: relative;
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 0 5px 0;
+}
+main .image-collage-wrapper .image-collage .right .bottom {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+main .image-collage-wrapper .image-collage .right .bottom .bottom-left {
+  background: url("./homepage/sdfa.png");
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 100%;
+  margin: 0 5px 0 0;
+}
+main .image-collage-wrapper .image-collage .right .bottom .bottom-right {
+  background: url("./homepage/TurrkishBaklava_CapsuleFront_1728x.webp");
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 100%;
+}
+main .image-collage-wrapper .image-collage h3 {
+  display: none;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000;
+  background: #f8a01a;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 5px 0;
+}
 
 #loading-overlay {
   position: fixed;
@@ -1944,6 +2015,49 @@ footer .third p:last-child {
   }
   main .what-wedo-wrapper .what-wedo .float .d-flex {
     align-items: center;
+  }
+  main .roadmap-wrapper {
+    padding: 50px 16px;
+  }
+  main .image-collage-wrapper {
+    padding: 50px 16px;
+  }
+  main .image-collage-wrapper .image-collage {
+    width: 100%;
+    height: 500px;
+    flex-direction: column;
+  }
+  main .image-collage-wrapper .image-collage .left {
+    height: 50%;
+    width: 100%;
+    margin: 0 0 5px 0;
+  }
+  main .image-collage-wrapper .image-collage .right {
+    height: 50%;
+    width: 100%;
+  }
+  main .image-collage-wrapper .image-collage .right .top {
+    width: 100%;
+    height: 50%;
+    margin: 0 0 5px 0;
+  }
+  main .image-collage-wrapper .image-collage .right .bottom {
+    width: 100%;
+    height: 50%;
+  }
+  main .image-collage-wrapper .image-collage .right .bottom .bottom-left {
+    width: 50%;
+    height: 100%;
+    margin: 0 5px 0 0;
+  }
+  main .image-collage-wrapper .image-collage .right .bottom .bottom-right {
+    width: 50%;
+    height: 100%;
+  }
+  main .image-collage-wrapper .image-collage h3 {
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .coupon-wrapper {
     left: -60px;

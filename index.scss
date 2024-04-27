@@ -931,7 +931,100 @@ main{
            }
         }
     }
-               
+    .roadmap-wrapper{
+        .h2{
+
+        }
+        .roadmap{
+            .desktop{
+                img{
+                    width: 100%;
+                }
+            }
+            .mobile{
+                display: none; 
+            } 
+        } 
+    }  
+    .image-collage-wrapper{
+        .image-collage{
+            width: 100%;
+            height: 500px;
+            .left{
+                background: url("./homepage/SummerMango_CapsuleFront_1728x.webp");
+                position: relative;
+                height: 100%;
+                width: 50%;
+                background-size: cover;
+                background-position: center;
+                margin: 0 5px 0 0;
+                h3{
+
+                }
+            }
+            .right{
+                position: relative;
+                flex-direction: column;
+                height: 100%;
+                width: 50%;
+                align-items: flex-end;
+                .top{
+                    background: url("./homepage/sadfs.png");
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+                    background-size: cover;
+                    background-position: center;
+                    margin: 0 0 5px 0;
+                    h3{
+
+                    }
+                }
+                .bottom{
+                    width: 100%;
+                    height: 50%;
+                    position: relative;
+                    .bottom-left{
+                        background: url("./homepage/sdfa.png");
+                        position: relative;
+                        background-size: cover;
+                        background-position: center;
+                        width: 50%;
+                        height: 100%;
+                        margin: 0 5px 0 0;
+                        h3{
+
+                        }
+                    }
+                    .bottom-right{
+                        background: url("./homepage/TurrkishBaklava_CapsuleFront_1728x.webp");
+                        position: relative;
+                        background-size: cover;
+                        background-position: center;
+                        width: 50%;
+                        height: 100%;
+                        h3{
+
+                        }
+                    }
+                }
+            }
+            h3{
+                display: none;
+                position: absolute;
+                bottom: 20%;
+                left: 50%;
+                transform: translateX(-50%);
+                color: #000;
+                background: #f8a01a;
+                width: 100%;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 400;
+                padding: 5px 0;
+            }
+        }
+    }                            
 }
 
 #loading-overlay {
@@ -2143,6 +2236,49 @@ footer{
                }
             }
         }
+        .roadmap-wrapper{
+            padding: 50px 16px;
+        }
+        .image-collage-wrapper{
+            padding: 50px 16px;
+            .image-collage{
+                width: 100%;
+                height: 500px;
+                flex-direction: column;
+                .left{
+                    height: 50%;
+                    width: 100%;
+                    margin: 0 0 5px 0;
+                }
+                .right{
+                    height: 50%;
+                    width: 100%;
+                    .top{
+                        width: 100%;
+                        height: 50%;
+                        margin: 0 0 5px 0;
+                    }
+                    .bottom{
+                        width: 100%;
+                        height: 50%;
+                        .bottom-left{
+                            width: 50%;
+                            height: 100%;
+                            margin: 0 5px 0 0;
+                        }
+                        .bottom-right{
+                            width: 50%;
+                            height: 100%;
+                        }
+                    }
+                }
+                h3{
+                    bottom: 20%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        } 
     } 
     .coupon-wrapper{
         left: -60px;
