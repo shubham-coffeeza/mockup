@@ -1923,6 +1923,7 @@ footer{
                     .category{
                         h3{
                             font-size: 14px;
+                            letter-spacing: 1px;
                         }
                     }
                 }
@@ -1996,7 +1997,7 @@ footer{
             .details{
                 width: 50%;
                 .secondary{
-                    font-size: 70px;
+                    font-size: 60px;
                 }
                 button{
                     margin-top: 40px;
@@ -2047,6 +2048,47 @@ footer{
             }
         }
     }
+    footer{
+        .first{
+            .flex-wrapper{
+                flex-direction: column;
+                .left{
+                    flex-direction: column;
+                    width: 100%;
+                    h2{
+                        font-size: 36px !important;
+                        width: 100% !important;
+                    }
+                    p{
+                        font-size: 24px !important;
+                        width: 100% !important;
+                    }
+                    .d-flex:last-child{
+                        margin-top: 30px;
+                        width: 100%;
+                        input{
+                            margin-left: 0;
+                            width: 70%;
+                        }
+                        button{
+                            width: 30%;
+                        }
+                    }
+                }
+                .right{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 30px;
+                    svg{
+                        width: 35px;
+                        height: 35px;
+                        margin-left: 50px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -2067,6 +2109,23 @@ footer{
                     // height: 400px;
                 }
             }
+        }
+        .prod-card-wrapper .prod-card{
+            grid-template-columns: auto auto;
+        }
+        .why-coffeeza-wrapper{
+            .why-coffeeza{
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                overflow: auto;
+            }
+        }
+        .bestseller-wrapper .details .secondary {
+            font-size: 48px;
+        }
+        .main-div.categories .categories-wrapper{
+            grid-template-columns: auto auto auto;
         }
     }
 }
@@ -2613,8 +2672,8 @@ footer{
         .why-coffeeza-wrapper{
             padding: 50px 16px;
             .why-coffeeza{
-                column-gap: 30px;
-                grid-template-columns: auto;
+                // column-gap: 30px;
+                // grid-template-columns: auto;
                 .flex{
                     display: flex;
                     justify-content: space-between;
@@ -2882,10 +2941,14 @@ footer{
                 }
                 .d-flex:nth-child(2){
                     align-self: center;
+                    width: 100%;
                 }
             } 
             .right{
                 margin-top: 40px;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
                 svg{
                     margin-left: 25px !important;
                     width: 30px !important;

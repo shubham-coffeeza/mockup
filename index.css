@@ -1779,6 +1779,7 @@ footer .third p:last-child {
   }
   main .main-div.categories .categories-wrapper .category h3 {
     font-size: 14px;
+    letter-spacing: 1px;
   }
   main .third-section {
     padding: 100px 0 600px;
@@ -1833,7 +1834,7 @@ footer .third p:last-child {
     width: 50%;
   }
   main .bestseller-wrapper .details .secondary {
-    font-size: 70px;
+    font-size: 60px;
   }
   main .bestseller-wrapper .details button {
     margin-top: 40px;
@@ -1863,6 +1864,43 @@ footer .third p:last-child {
   main .collection-wrapper .collection .caption {
     font-size: 20px !important;
   }
+  footer .first .flex-wrapper {
+    flex-direction: column;
+  }
+  footer .first .flex-wrapper .left {
+    flex-direction: column;
+    width: 100%;
+  }
+  footer .first .flex-wrapper .left h2 {
+    font-size: 36px !important;
+    width: 100% !important;
+  }
+  footer .first .flex-wrapper .left p {
+    font-size: 24px !important;
+    width: 100% !important;
+  }
+  footer .first .flex-wrapper .left .d-flex:last-child {
+    margin-top: 30px;
+    width: 100%;
+  }
+  footer .first .flex-wrapper .left .d-flex:last-child input {
+    margin-left: 0;
+    width: 70%;
+  }
+  footer .first .flex-wrapper .left .d-flex:last-child button {
+    width: 30%;
+  }
+  footer .first .flex-wrapper .right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  footer .first .flex-wrapper .right svg {
+    width: 35px;
+    height: 35px;
+    margin-left: 50px;
+  }
 }
 @media screen and (max-width: 768px) {
   main .instagram .insta-wrapper .insta-post {
@@ -1870,6 +1908,21 @@ footer .third p:last-child {
   }
   main .instagram .insta-wrapper .insta-post .instagram-media {
     margin-top: -2px !important;
+  }
+  main .prod-card-wrapper .prod-card {
+    grid-template-columns: auto auto;
+  }
+  main .why-coffeeza-wrapper .why-coffeeza {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: auto;
+  }
+  main .bestseller-wrapper .details .secondary {
+    font-size: 48px;
+  }
+  main .main-div.categories .categories-wrapper {
+    grid-template-columns: auto auto auto;
   }
 }
 @media screen and (max-width: 545px) {
@@ -2355,11 +2408,6 @@ footer .third p:last-child {
   main .why-coffeeza-wrapper {
     padding: 50px 16px;
   }
-  main .why-coffeeza-wrapper .why-coffeeza {
-    -moz-column-gap: 30px;
-         column-gap: 30px;
-    grid-template-columns: auto;
-  }
   main .why-coffeeza-wrapper .why-coffeeza .flex {
     display: flex;
     justify-content: space-between;
@@ -2610,9 +2658,13 @@ footer .third p:last-child {
   }
   footer .first .left .d-flex:nth-child(2) {
     align-self: center;
+    width: 100%;
   }
   footer .first .right {
     margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
   }
   footer .first .right svg {
     margin-left: 25px !important;
