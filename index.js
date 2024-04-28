@@ -262,33 +262,55 @@ document.addEventListener("DOMContentLoaded", function() {
     
 
 //Visibility in viewport
-function checkViewportVisibility() {
-  const handleVisibility = (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("viewport-active");
-        // Once an element is intersecting, we can unobserve it
-        observer.unobserve(entry.target);
-      }
+  function checkViewportVisibility() {
+    const handleVisibility = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("viewport-active");
+          // Once an element is intersecting, we can unobserve it
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleVisibility, {
+      root: null, // Use the viewport as the root
+      rootMargin: "0px", // No margin around the viewport
+      threshold: 0.1 // Fire the callback when 10% of the target is visible
     });
-  };
 
-  const observer = new IntersectionObserver(handleVisibility, {
-    root: null, // Use the viewport as the root
-    rootMargin: "0px", // No margin around the viewport
-    threshold: 0.1 // Fire the callback when 10% of the target is visible
-  });
+    const elements = document.querySelectorAll(".in-viewport");
 
-  const elements = document.querySelectorAll(".in-viewport");
-
-  elements.forEach((element) => {
-    observer.observe(element);
-  });
-}
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+  }
 
 checkViewportVisibility();
 //Visibility in viewport
 
-//Instagram Reels
-//Instagram Reels
+//Multi tab wrapper
+  var divs = document.querySelectorAll(".collection-click");
+  divs.forEach(function(div, index) {
+    div.addEventListener("click", function() {
+      var relatedDiv = document.getElementById("show-" + (index + 1));
+      var allRelatedDivs = document.querySelectorAll('.collection-show');
+      divs.forEach(function(d) {
+        d.classList.remove('active');
+      });
+
+      div.classList.add('active');
+      
+      allRelatedDivs.forEach(function(element) {
+        if (element === relatedDiv) {
+          element.classList.remove("d-none");
+          element.classList.add("d-block");
+        } else {
+          element.classList.remove("d-block");
+          element.classList.add("d-none");
+        }
+      });
+    });
+  });
+//Multi tab wrapper
 });

@@ -73,37 +73,37 @@ body{
     margin-right: auto;
     margin-left: auto;
     padding: 0 16px;
-  }
+}
   
-  @media (min-width: 576px) {
+@media (min-width: 576px) {
     .container {
       max-width: 540px;
     }
-  }
+}
   
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .container {
       max-width: 720px;
     }
-  }
+}
   
-  @media (min-width: 992px) {
+@media (min-width: 992px) {
     .container {
       max-width: 960px;
     }
-  }
+}
   
-  @media (min-width: 1200px) {
+@media (min-width: 1200px) {
     .container {
       max-width: 1140px;
     }
-  }
+}
   
-  @media (min-width: 1440px) {
+@media (min-width: 1440px) {
     .container {
       max-width: 1184px;
     }
-  }
+}
 
 .promo-wrapper{
     background-color: #ca192e;
@@ -728,7 +728,7 @@ main{
     .blogs-wrapper{
         .blogs{
             .blog-one{
-                background: url("./homepage/imgpsh_fullsize_anim\ \(2\).png");
+                background: url("./homepage/sadfs.png");
                 height: 400px;
                 background-size: cover;
                 width: 100%;
@@ -1111,7 +1111,47 @@ main{
                 }
             }
         } 
-    }        
+    }     
+    .multi-tabs-wrapper{
+        .multi-tabs{
+            .tabs-primary{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding-bottom: 20px;
+                border-bottom: 2px solid black;
+                margin-bottom: 50px;
+                .collection-click{
+                    cursor: pointer;
+                    padding: 10px 20px;
+                    border-bottom: 1px solid transparent;
+                    h3{
+                        text-align: center;
+                        color: #3333339a;
+                    }
+                    &.active{
+                        border-bottom: 1px solid gray;
+                        h3{
+                            color: #333;
+                        }
+                    } 
+                }
+            }       
+            .tabs-secondary{
+                img{
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 4px;
+                }
+                .best-rated-view, .coffee-capsules, .coffee-machines, .merch{
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    gap: 30px;
+                }
+            }
+        }
+    }
+                                  
 }
 
 #loading-overlay {
@@ -2425,7 +2465,32 @@ footer{
                     width: 100%;
                 }
             } 
-        }  
+        }       
+        .multi-tabs-wrapper{
+            padding: 50px 16px;
+            .multi-tabs{
+                .tabs-primary{
+                    flex-wrap: wrap;
+                    .collection-click{
+                        padding: 5px 5px;
+                        h3{
+                            font-size: 12px;
+                        }
+                    }
+                }       
+                .tabs-secondary{
+                    img{
+                    }
+                    .best-rated-view, .coffee-capsules, .coffee-machines, .merch{
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        gap: 15px;
+                        max-height: 450px;
+                        overflow: scroll;
+                    }
+                }
+            }
+        }
     } 
     .coupon-wrapper{
         left: -60px;

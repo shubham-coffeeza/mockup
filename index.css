@@ -704,7 +704,7 @@ main .instagram .insta-wrapper .insta-post .instagram-media {
   min-width: unset !important;
 }
 main .blogs-wrapper .blogs .blog-one {
-  background: url("./homepage/imgpsh_fullsize_anim (2).png");
+  background: url("./homepage/sadfs.png");
   height: 400px;
   background-size: cover;
   width: 100%;
@@ -1030,6 +1030,39 @@ main .collection-wrapper .collection .third {
 }
 main .collection-wrapper .collection .third p {
   color: #fff;
+}
+main .multi-tabs-wrapper .multi-tabs .tabs-primary {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid black;
+  margin-bottom: 50px;
+}
+main .multi-tabs-wrapper .multi-tabs .tabs-primary .collection-click {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-bottom: 1px solid transparent;
+}
+main .multi-tabs-wrapper .multi-tabs .tabs-primary .collection-click h3 {
+  text-align: center;
+  color: rgba(51, 51, 51, 0.6039215686);
+}
+main .multi-tabs-wrapper .multi-tabs .tabs-primary .collection-click.active {
+  border-bottom: 1px solid gray;
+}
+main .multi-tabs-wrapper .multi-tabs .tabs-primary .collection-click.active h3 {
+  color: #333;
+}
+main .multi-tabs-wrapper .multi-tabs .tabs-secondary img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+main .multi-tabs-wrapper .multi-tabs .tabs-secondary .best-rated-view, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-capsules, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-machines, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .merch {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px;
 }
 
 #loading-overlay {
@@ -2176,6 +2209,25 @@ footer .third p:last-child {
   }
   main .collection-wrapper .collection .second {
     width: 100%;
+  }
+  main .multi-tabs-wrapper {
+    padding: 50px 16px;
+  }
+  main .multi-tabs-wrapper .multi-tabs .tabs-primary {
+    flex-wrap: wrap;
+  }
+  main .multi-tabs-wrapper .multi-tabs .tabs-primary .collection-click {
+    padding: 5px 5px;
+  }
+  main .multi-tabs-wrapper .multi-tabs .tabs-primary .collection-click h3 {
+    font-size: 12px;
+  }
+  main .multi-tabs-wrapper .multi-tabs .tabs-secondary .best-rated-view, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-capsules, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-machines, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .merch {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+    max-height: 450px;
+    overflow: scroll;
   }
   .coupon-wrapper {
     left: -60px;
