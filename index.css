@@ -958,6 +958,79 @@ main .image-collage-wrapper .image-collage h3 {
   font-weight: 400;
   padding: 5px 0;
 }
+main .why-coffeeza-wrapper h3 {
+  text-align: center;
+}
+main .why-coffeeza-wrapper .why-coffeeza {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: auto auto auto;
+}
+main .why-coffeeza-wrapper .why-coffeeza .flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+main .why-coffeeza-wrapper .why-coffeeza .flex h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+main .why-coffeeza-wrapper .why-coffeeza .flex p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+main .why-coffeeza-wrapper .why-coffeeza .flex p:last-child {
+  color: gray;
+  font-style: italic;
+}
+main .collection-wrapper .collection .first {
+  width: 100%;
+}
+main .collection-wrapper .collection .first .flex img {
+  width: 100%;
+  border-radius: 4px;
+}
+main .collection-wrapper .collection .first, main .collection-wrapper .collection .second, main .collection-wrapper .collection .third {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto auto auto;
+  margin-bottom: 20px;
+}
+main .collection-wrapper .collection .first .flex, main .collection-wrapper .collection .second .flex, main .collection-wrapper .collection .third .flex {
+  position: relative;
+  height: 100%;
+}
+main .collection-wrapper .collection .first img, main .collection-wrapper .collection .second img, main .collection-wrapper .collection .third img {
+  width: 100%;
+  height: 100%;
+}
+main .collection-wrapper .collection .first p, main .collection-wrapper .collection .second p, main .collection-wrapper .collection .third p {
+  font-size: 25px;
+  width: 90%;
+  letter-spacing: 2px;
+  padding: 5px 10px;
+  font-weight: 600;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: #021b61;
+  text-align: center;
+}
+main .collection-wrapper .collection .second {
+  width: 100%;
+}
+main .collection-wrapper .collection .third {
+  width: 100%;
+  height: auto;
+  grid-template-columns: auto auto;
+}
+main .collection-wrapper .collection .third p {
+  color: #fff;
+}
 
 #loading-overlay {
   position: fixed;
@@ -1570,6 +1643,9 @@ footer .third p:last-child {
   main .instagram .insta-wrapper .insta-post .instagram-media {
     margin-top: 6px !important;
   }
+  main .collection-wrapper .collection .caption {
+    font-size: 20px !important;
+  }
 }
 @media screen and (max-width: 768px) {
   main .instagram .insta-wrapper .insta-post {
@@ -2058,6 +2134,48 @@ footer .third p:last-child {
     bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
+  }
+  main .why-coffeeza-wrapper {
+    padding: 50px 16px;
+  }
+  main .why-coffeeza-wrapper .why-coffeeza {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    grid-template-columns: auto;
+  }
+  main .why-coffeeza-wrapper .why-coffeeza .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .why-coffeeza-wrapper .why-coffeeza .flex h4 {
+    margin-top: 20px;
+  }
+  main .collection-wrapper {
+    padding: 50px 16px;
+  }
+  main .collection-wrapper .collection .first {
+    width: 100%;
+  }
+  main .collection-wrapper .collection .first, main .collection-wrapper .collection .second, main .collection-wrapper .collection .third {
+    overflow: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 20px;
+  }
+  main .collection-wrapper .collection .first p, main .collection-wrapper .collection .second p, main .collection-wrapper .collection .third p {
+    font-size: 25px;
+  }
+  main .collection-wrapper .collection .first .flex, main .collection-wrapper .collection .second .flex, main .collection-wrapper .collection .third .flex {
+    width: 100%;
+  }
+  main .collection-wrapper .collection .first img, main .collection-wrapper .collection .second img, main .collection-wrapper .collection .third img {
+    width: 300px !important;
+  }
+  main .collection-wrapper .collection .second {
+    width: 100%;
   }
   .coupon-wrapper {
     left: -60px;
