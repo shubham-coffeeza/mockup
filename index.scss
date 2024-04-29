@@ -455,7 +455,7 @@ main{
             border: none;
             cursor: pointer;
             padding: 10px;
-            z-index: 99;
+            z-index: 0;
         }
         
         .prev {
@@ -604,16 +604,16 @@ main{
                 cursor: pointer;
                 // width: 48px;
                 // height: 48px;
-                z-index: 1;
+                z-index: 0;
                 font-size: 100px;
                 transition: all 0.5s ease;
                 &.best-rated-prev{
                     left: 0;
-                    // animation: slider-btn-left 2s linear infinite;
+                    animation: slider-btn-left 2s linear infinite;
                 }
                 &.best-rated-next{
                     right: 0;
-                    // animation: slider-btn-right 2s linear infinite;
+                    animation: slider-btn-right 2s linear infinite;
                 }
                 &:hover{
                     color: #333;
@@ -1078,6 +1078,7 @@ main{
                 gap: 20px;
                 grid-template-columns: auto auto auto;
                 margin-bottom: 20px;
+                position: relative;
                 .flex{
                     position: relative;
                     height: 100%;
@@ -1099,6 +1100,26 @@ main{
                     z-index: 1;
                     color: #021b61;
                     text-align: center;
+                }
+                .prev{
+                    left: 0;
+                    animation: slider-btn-left 2s linear infinite;
+                }
+                .next{
+                    right: 0;
+                    animation: slider-btn-right 2s linear infinite;
+                }
+                .prev, .next{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: transparent;
+                    color: rgba(51, 51, 51, 0.6039215686);
+                    border: none;
+                    cursor: pointer;
+                    z-index: 0;
+                    font-size: 100px;
+                    transition: all 0.5s ease;
                 }
             }
             .second{
@@ -1161,6 +1182,7 @@ main{
             align-items: flex-start;
             max-width: 100%;
             overflow: auto;
+            position: relative;
             .inner{
                 margin-right: 20px;
                 width: 100px;
@@ -1192,6 +1214,26 @@ main{
             &::-webkit-scrollbar-thumb:hover {
                 background: #b30000; 
             }
+        }
+        .prev, .next{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0);
+            color: #585757;
+            font-size: 60px;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 0;
+        }
+        .prev{
+            left: 0;
+            animation: slider-btn-left 2s linear infinite;
+        }
+        .next{
+            right: 0;
+            animation: slider-btn-right 2s linear infinite;
         }
     }
     .prod-card-wrapper{

@@ -427,7 +427,7 @@ main .brands .prev, main .brands .next {
   border: none;
   cursor: pointer;
   padding: 10px;
-  z-index: 99;
+  z-index: 0;
 }
 main .brands .prev {
   left: 0;
@@ -594,15 +594,17 @@ main .best-rated-wrapper .slider button {
   color: rgba(51, 51, 51, 0.6039215686);
   border: none;
   cursor: pointer;
-  z-index: 1;
+  z-index: 0;
   font-size: 100px;
   transition: all 0.5s ease;
 }
 main .best-rated-wrapper .slider button.best-rated-prev {
   left: 0;
+  animation: slider-btn-left 2s linear infinite;
 }
 main .best-rated-wrapper .slider button.best-rated-next {
   right: 0;
+  animation: slider-btn-right 2s linear infinite;
 }
 main .best-rated-wrapper .slider button:hover {
   color: #333;
@@ -1000,6 +1002,7 @@ main .collection-wrapper .collection .first, main .collection-wrapper .collectio
   gap: 20px;
   grid-template-columns: auto auto auto;
   margin-bottom: 20px;
+  position: relative;
 }
 main .collection-wrapper .collection .first .flex, main .collection-wrapper .collection .second .flex, main .collection-wrapper .collection .third .flex {
   position: relative;
@@ -1022,6 +1025,26 @@ main .collection-wrapper .collection .first p, main .collection-wrapper .collect
   z-index: 1;
   color: #021b61;
   text-align: center;
+}
+main .collection-wrapper .collection .first .prev, main .collection-wrapper .collection .second .prev, main .collection-wrapper .collection .third .prev {
+  left: 0;
+  animation: slider-btn-left 2s linear infinite;
+}
+main .collection-wrapper .collection .first .next, main .collection-wrapper .collection .second .next, main .collection-wrapper .collection .third .next {
+  right: 0;
+  animation: slider-btn-right 2s linear infinite;
+}
+main .collection-wrapper .collection .first .prev, main .collection-wrapper .collection .first .next, main .collection-wrapper .collection .second .prev, main .collection-wrapper .collection .second .next, main .collection-wrapper .collection .third .prev, main .collection-wrapper .collection .third .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: rgba(51, 51, 51, 0.6039215686);
+  border: none;
+  cursor: pointer;
+  z-index: 0;
+  font-size: 100px;
+  transition: all 0.5s ease;
 }
 main .collection-wrapper .collection .second {
   width: 100%;
@@ -1073,6 +1096,7 @@ main .everything-wrapper .everything {
   align-items: flex-start;
   max-width: 100%;
   overflow: auto;
+  position: relative;
 }
 main .everything-wrapper .everything .inner {
   margin-right: 20px;
@@ -1100,6 +1124,26 @@ main .everything-wrapper .everything::-webkit-scrollbar-thumb {
 }
 main .everything-wrapper .everything::-webkit-scrollbar-thumb:hover {
   background: #b30000;
+}
+main .everything-wrapper .prev, main .everything-wrapper .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  color: #585757;
+  font-size: 60px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 0;
+}
+main .everything-wrapper .prev {
+  left: 0;
+  animation: slider-btn-left 2s linear infinite;
+}
+main .everything-wrapper .next {
+  right: 0;
+  animation: slider-btn-right 2s linear infinite;
 }
 main .prod-card-wrapper .prod-card {
   display: grid;
