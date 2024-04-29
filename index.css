@@ -95,6 +95,9 @@ body {
   .container {
     max-width: 720px;
   }
+  .header-banner-wrapper {
+    background-image: url("./hero.jpg") !important;
+  }
 }
 @media (min-width: 992px) {
   .container {
@@ -123,7 +126,6 @@ body {
 }
 
 .header-banner-wrapper {
-  background-image: url("./hero.jpg");
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
@@ -387,11 +389,10 @@ main .brands {
   min-height: 70vh;
 }
 main .brands .brand-btn-wrapper {
-  position: relative;
   overflow-x: scroll;
   scroll-behavior: smooth;
-  scrollbar-width: none;
   cursor: pointer;
+  padding-bottom: 30px;
 }
 main .brands h2 {
   font-family: "kscript";
@@ -419,7 +420,7 @@ main .brands .brand-wrapper .brand img {
 }
 main .brands .prev, main .brands .next {
   position: absolute;
-  top: 50%;
+  top: 35%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0);
   color: #585757;
@@ -990,6 +991,13 @@ main .why-coffeeza-wrapper .why-coffeeza .flex p:last-child {
   font-style: italic;
   font-weight: 600;
 }
+main .why-coffeeza-wrapper .relative .prev, main .why-coffeeza-wrapper .relative .next {
+  display: none;
+}
+main .why-coffeeza-wrapper .scroll-slider-wrapper {
+  overflow: auto;
+  scroll-behavior: smooth;
+}
 main .collection-wrapper .collection .first {
   width: 100%;
 }
@@ -1002,7 +1010,6 @@ main .collection-wrapper .collection .first, main .collection-wrapper .collectio
   gap: 20px;
   grid-template-columns: auto auto auto;
   margin-bottom: 20px;
-  position: relative;
 }
 main .collection-wrapper .collection .first .flex, main .collection-wrapper .collection .second .flex, main .collection-wrapper .collection .third .flex {
   position: relative;
@@ -1026,26 +1033,6 @@ main .collection-wrapper .collection .first p, main .collection-wrapper .collect
   color: #021b61;
   text-align: center;
 }
-main .collection-wrapper .collection .first .prev, main .collection-wrapper .collection .second .prev, main .collection-wrapper .collection .third .prev {
-  left: 0;
-  animation: slider-btn-left 2s linear infinite;
-}
-main .collection-wrapper .collection .first .next, main .collection-wrapper .collection .second .next, main .collection-wrapper .collection .third .next {
-  right: 0;
-  animation: slider-btn-right 2s linear infinite;
-}
-main .collection-wrapper .collection .first .prev, main .collection-wrapper .collection .first .next, main .collection-wrapper .collection .second .prev, main .collection-wrapper .collection .second .next, main .collection-wrapper .collection .third .prev, main .collection-wrapper .collection .third .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  color: rgba(51, 51, 51, 0.6039215686);
-  border: none;
-  cursor: pointer;
-  z-index: 0;
-  font-size: 100px;
-  transition: all 0.5s ease;
-}
 main .collection-wrapper .collection .second {
   width: 100%;
 }
@@ -1056,6 +1043,9 @@ main .collection-wrapper .collection .third {
 }
 main .collection-wrapper .collection .third p {
   color: #fff;
+}
+main .collection-wrapper .collection .relative .prev, main .collection-wrapper .collection .relative .next {
+  display: none;
 }
 main .multi-tabs-wrapper .multi-tabs .tabs-primary {
   display: flex;
@@ -1095,8 +1085,6 @@ main .everything-wrapper .everything {
   justify-content: flex-start;
   align-items: flex-start;
   max-width: 100%;
-  overflow: auto;
-  position: relative;
 }
 main .everything-wrapper .everything .inner {
   margin-right: 20px;
@@ -1125,7 +1113,7 @@ main .everything-wrapper .everything::-webkit-scrollbar-thumb {
 main .everything-wrapper .everything::-webkit-scrollbar-thumb:hover {
   background: #b30000;
 }
-main .everything-wrapper .prev, main .everything-wrapper .next {
+main .everything-wrapper .relative .prev, main .everything-wrapper .relative .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1137,13 +1125,17 @@ main .everything-wrapper .prev, main .everything-wrapper .next {
   padding: 10px;
   z-index: 0;
 }
-main .everything-wrapper .prev {
+main .everything-wrapper .relative .prev {
   left: 0;
   animation: slider-btn-left 2s linear infinite;
 }
-main .everything-wrapper .next {
+main .everything-wrapper .relative .next {
   right: 0;
   animation: slider-btn-right 2s linear infinite;
+}
+main .everything-wrapper .scroll-slider-wrapper {
+  overflow: auto;
+  scroll-behavior: smooth;
 }
 main .prod-card-wrapper .prod-card {
   display: grid;
@@ -1970,10 +1962,8 @@ footer .third p:last-child {
     grid-template-columns: auto auto;
   }
   main .why-coffeeza-wrapper .why-coffeeza {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    overflow: auto;
+    grid-template-columns: 100% 100% 100%;
+    gap: 0;
   }
   main .bestseller-wrapper .details .secondary {
     font-size: 48px;
@@ -1987,7 +1977,6 @@ footer .third p:last-child {
     font-size: 10px;
   }
   .header-banner-wrapper {
-    background-image: url("./hero-mobie.jpg");
     background-size: cover;
     background-repeat: repeat-y;
   }
@@ -2178,7 +2167,6 @@ footer .third p:last-child {
     position: relative;
   }
   main .main-div.categories .categories-wrapper .category img {
-    opacity: 70%;
     width: 100px;
   }
   main .main-div.categories .categories-wrapper .category h3 {
@@ -2284,6 +2272,7 @@ footer .third p:last-child {
     font-size: 65px;
   }
   main .brands {
+    padding: 50px 16px;
     min-height: 50vh;
   }
   main .bestseller-wrapper {
@@ -2482,6 +2471,30 @@ footer .third p:last-child {
   main .why-coffeeza-wrapper .why-coffeeza .flex h4 {
     margin-top: 20px;
   }
+  main .why-coffeeza-wrapper .why-coffeeza .flex p, main .why-coffeeza-wrapper .why-coffeeza .flex h4 {
+    width: 300px;
+  }
+  main .why-coffeeza-wrapper .relative .prev {
+    left: 0;
+    animation: slider-btn-left 2s linear infinite;
+  }
+  main .why-coffeeza-wrapper .relative .next {
+    right: 0;
+    animation: slider-btn-right 2s linear infinite;
+  }
+  main .why-coffeeza-wrapper .relative .prev, main .why-coffeeza-wrapper .relative .next {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: rgba(51, 51, 51, 0.6039215686);
+    border: none;
+    cursor: pointer;
+    z-index: 0;
+    font-size: 100px;
+    transition: all 0.5s ease;
+  }
   main .collection-wrapper {
     padding: 50px 16px;
   }
@@ -2489,11 +2502,8 @@ footer .third p:last-child {
     width: 100%;
   }
   main .collection-wrapper .collection .first, main .collection-wrapper .collection .second, main .collection-wrapper .collection .third {
-    overflow: auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-right: 20px;
+    grid-template-columns: 100% 100% 100%;
+    gap: 0;
   }
   main .collection-wrapper .collection .first p, main .collection-wrapper .collection .second p, main .collection-wrapper .collection .third p {
     font-size: 25px;
@@ -2502,10 +2512,35 @@ footer .third p:last-child {
     width: 100%;
   }
   main .collection-wrapper .collection .first img, main .collection-wrapper .collection .second img, main .collection-wrapper .collection .third img {
-    width: 300px !important;
+    width: 100% !important;
   }
   main .collection-wrapper .collection .second {
     width: 100%;
+  }
+  main .collection-wrapper .collection .relative .prev {
+    left: 0;
+    animation: slider-btn-left 2s linear infinite;
+  }
+  main .collection-wrapper .collection .relative .next {
+    right: 0;
+    animation: slider-btn-right 2s linear infinite;
+  }
+  main .collection-wrapper .collection .relative .prev, main .collection-wrapper .collection .relative .next {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: rgba(51, 51, 51, 0.6039215686);
+    border: none;
+    cursor: pointer;
+    z-index: 0;
+    font-size: 100px;
+    transition: all 0.5s ease;
+  }
+  main .collection-wrapper .collection .scroll-slider-wrapper {
+    overflow: auto;
+    scroll-behavior: smooth;
   }
   main .multi-tabs-wrapper {
     padding: 50px 16px;
@@ -2678,7 +2713,7 @@ footer .third p:last-child {
   }
   .coupon-btn-wrapper {
     left: -55px;
-    top: 460px;
+    top: 300px;
     z-index: 9;
   }
   .coupon-btn-wrapper .coupon-btn {
@@ -2765,5 +2800,9 @@ footer .third p:last-child {
   footer .third p:last-child {
     width: 100% !important;
     font-size: 10px !important;
+  }
+  .exit-intent-popup img {
+    width: 100%;
+    height: auto;
   }
 }/*# sourceMappingURL=index.css.map */

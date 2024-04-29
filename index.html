@@ -16,7 +16,7 @@
     <div class="promo-wrapper">
         <p>Get 10% OFF on Monsooned Malabar Coffee with code "MALABAR10".</p>
     </div>
-    <div class="header-banner-wrapper">
+        <div class="header-banner-wrapper" style="background-image: url('./hero-mobie.jpg'); ">
         <header class="">
             <div class="container">
                 <div class="logo-wrapper">
@@ -160,8 +160,8 @@
             <div class="main-div-inside">
                 <h2>Also Available At</h2>
                 <div class="relative">
-                    <div class="brand-btn-wrapper">
-                        <div class="brand-wrapper" ontouchstart="startDrag(event)" ontouchmove="drag(event)" ontouchend="endDrag()">
+                    <div class="brand-btn-wrapper scroll-slider-wrapper">
+                        <div class="brand-wrapper">
                             <div class="brand">
                                 <img loading="lazy" src="./homepage/brands/dmart-Photoroom.png-Photoroom.png"  alt=""  width="100" height="140">
                             </div>
@@ -193,9 +193,9 @@
                                 <img loading="lazy" src="./homepage/brands/reliance_fresh_logo_360x.avif" alt="" width="100" height="140">
                             </div>
                         </div>
+                        <button name="prev_button" class="prev">❮</button>
+                        <button name="next_button" class="next">❯</button>
                     </div>
-                    <button name="prev_button" class="prev">❮</button>
-                    <button name="next_button" class="next">❯</button>
                 </div>
             </div>
         </div>
@@ -233,8 +233,8 @@
             <div class="main-div-inside">
                 <h2>In the press</h2>
                 <div class="relative">
-                    <div class="brand-btn-wrapper press-btn-wrapper">
-                        <div class="brand-wrapper press-wrapper" ontouchstart="startDragPress(event)" ontouchmove="dragPress(event)" ontouchend="endDragPress()">
+                    <div class="brand-btn-wrapper press-btn-wrapper  scroll-slider-wrapper">
+                        <div class="brand-wrapper press-wrapper">
                             <div class="brand press">
                                 <img loading="lazy" src="./homepage/press/elle_320x.avif"  alt=""  width="100" height="100">
                             </div>
@@ -260,9 +260,9 @@
                                 <img loading="lazy" src="./homepage/press/yourstory_320x.avif" alt="" width="100" height="100">
                             </div>
                         </div>
+                        <button name="prev_button" class="prev">❮</button>
+                        <button name="next_button" class="next">❯</button>
                     </div>
-                    <button name="prev_button" class="press-prev prev">❮</button>
-                    <button name="next_button" class="press-next next">❯</button>
                 </div>
             </div>
         </div>
@@ -639,71 +639,85 @@
             <div class="main-div-inside">
                 <h2>Why Coffeeza?</h2>
                 <h3>At Coffeeza®, we strongly believe in adding value to the life of everyday consumers. We are building a clean, functional and holistic oral care brand that is :</h3>
-                <div class="why-coffeeza">
-                    <div class="flex">
-                        <img loading="lazy" src="./homepage/why1.avif" alt="" width="200" height="200">
-                        <h4>Science Backed</h4>
-                        <p>Our products are developed post extensive expert research and testing to ensure functionality and effectiveness.</p>
-                        <p>Made from Grade A coffee, roasted in small batches.</p>
-                    </div> 
-                    <div class="flex">
-                        <img loading="lazy" src="./homepage/why2.avif" alt="" width="200" height="200">
-                        <h4>Design - Led</h4>
-                        <p>We create products that are easy to integrate in your daily life. We think, create, and continuously iterate to deliver the best.</p>
-                        <p>Try us out at a special price. Use this code on checkout—</p>
-                    </div> 
-                    <div class="flex">
-                        <img loading="lazy" src="./homepage/why3.avif" alt="" width="200" height="200">
-                        <h4>Mindful</h4>
-                        <p>We are extremely conscious of our actions and their impact on our planet and hence, all our products are 100% recyclable.</p>
-                        <p>Packed in materials that are safe for the planet.</p>
-                    </div>                    
+                <div class="relative">
+                    <div class="scroll-slider-wrapper">
+                        <div class="why-coffeeza">
+                            <div class="flex">
+                                <img loading="lazy" src="./homepage/why1.avif" alt="" width="200" height="200">
+                                <h4>Science Backed</h4>
+                                <p>Our products are developed post extensive expert research and testing to ensure functionality and effectiveness.</p>
+                                <p>Made from Grade A coffee, roasted in small batches.</p>
+                            </div> 
+                            <div class="flex">
+                                <img loading="lazy" src="./homepage/why2.avif" alt="" width="200" height="200">
+                                <h4>Design - Led</h4>
+                                <p>We create products that are easy to integrate in your daily life. We think, create, and continuously iterate to deliver the best.</p>
+                                <p>Try us out at a special price. Use this code on checkout—</p>
+                            </div> 
+                            <div class="flex">
+                                <img loading="lazy" src="./homepage/why3.avif" alt="" width="200" height="200">
+                                <h4>Mindful</h4>
+                                <p>We are extremely conscious of our actions and their impact on our planet and hence, all our products are 100% recyclable.</p>
+                                <p>Packed in materials that are safe for the planet.</p>
+                            </div>                    
+                        </div>
+                        <button name="prev_button" class="prev">❮</button>
+                        <button name="next_button" class="next">❯</button>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="main-div container collection-wrapper">
             <div class="main-div-inside">
                 <div class="collection">
-                    <div class="first d-flex justify-between align-start">
-                        <div class="flex">
-                            <img loading="lazy" src="./homepage/t4.jpg" alt="" height="550" width="350">
-                            <p class="caption">
-                                Perfect Companions To Your Coffee
-                                </p>
+                    <div class="relative">
+                        <div class="scroll-slider-wrapper">
+                            <div class="first d-flex justify-between align-start">
+                                <div class="flex">
+                                    <img loading="lazy" src="./homepage/t4.jpg" alt="" height="550" width="350">
+                                    <p class="caption">
+                                        Perfect Companions To Your Coffee
+                                        </p>
+                                </div>
+                                <div class="flex">
+                                    <img loading="lazy" src="./homepage/t5.jpg" alt="" height="550" width="350">
+                                    <p class="caption">
+                                        Hot Brew—Ready in 5 Minutes
+                                        </p>
+                                </div>
+                                <div class="flex">
+                                    <img src="./homepage/t9.jpg" alt="" height="550" width="350">
+                                    <p class="caption">
+                                        Signature Arabica Coffee Beans
+                                        </p>
+                                </div>
+                            </div>
+                            <button name="prev_button" class="prev">❮</button>
+                            <button name="next_button" class="next">❯</button>
                         </div>
-                        <div class="flex">
-                            <img loading="lazy" src="./homepage/t5.jpg" alt="" height="550" width="350">
-                            <p class="caption">
-                                Hot Brew—Ready in 5 Minutes
-                                </p>
-                        </div>
-                        <div class="flex">
-                            <img loading="lazy" src="./homepage/t9.jpg" alt="" height="550" width="350">
-                            <p class="caption">
-                                Signature Arabica Coffee Beans
-                                </p>
-                        </div>
-                        <button name="prev_button" class="press-prev prev">❮</button>
-                        <button name="next_button" class="press-next next">❯</button>
                     </div>
-                    <div class="second d-flex justify-between align-start">
-                        <div class="flex">
-                            <img loading="lazy" src="./homepage/t11.jpg" alt="" width="350" height="350">
-                            <p class="caption">
-                                Filter Coffee that Packs a Punch
-                                </p>
+                    <div class="relative">
+                        <div class="scroll-slider-wrapper">
+                            <div class="second d-flex justify-between align-start">
+                                <div class="flex">
+                                    <img loading="lazy" src="./homepage/t11.jpg" alt="" width="350" height="350">
+                                    <p class="caption">
+                                        Filter Coffee that Packs a Punch
+                                        </p>
+                                </div>
+                                <div class="flex">
+                                    <img loading="lazy" src="./homepage/t7.jpg" alt="" width="350" height="350">
+                                </div>
+                                <div class="flex">
+                                    <img src="./homepage/t13.jpg" alt="" width="350" height="350">
+                                    <p class="caption">
+                                        Iced Coffee made with Cold Brew
+                                        </p>
+                                </div>
+                            </div>
+                            <button name="prev_button" class="prev">❮</button>
+                            <button name="next_button" class="next">❯</button>
                         </div>
-                        <div class="flex">
-                            <img loading="lazy" src="./homepage/t7.jpg" alt="" width="350" height="350">
-                        </div>
-                        <div class="flex">
-                            <img loading="lazy" src="./homepage/t13.jpg" alt="" width="350" height="350">
-                            <p class="caption">
-                                Iced Coffee made with Cold Brew
-                                </p>
-                        </div>
-                        <button name="prev_button" class="press-prev prev">❮</button>
-                        <button name="next_button" class="press-next next">❯</button>
                     </div>
                     <!-- <div class="third d-flex justify-between align-start">
                         <div class="flex">
@@ -787,43 +801,47 @@
         </div>
         <div class="main-div container everything-wrapper">
             <div class="main-div-inside">
-                <h2>Everything! What We've Got</h2>
-                <div class="everything">
-                    <div class="inner">
-                        <img loading="lazy" src="./homepage/pods/1.avif" alt="" width="80" height="80">
+                <h2>Everything!</br> What We've Got</h2>
+                <div class="relative ">
+                    <div class="scroll-slider-wrapper">
+                        <div class="everything">
+                            <div class="inner">
+                                <img loading="lazy" src="./homepage/pods/1.avif" alt="" width="80" height="80">
+                            </div>
+                            <div class="inner">
+                                <img loading="lazy" src="./homepage/pods/2.avif" alt="" width="80" height="80">
+                            </div>
+                            <div class="inner">
+                                <img loading="lazy" src="./homepage/pods/3.webp" alt="" width="80" height="80">
+                            </div>
+                            <div class="inner">
+                                <img loading="lazy" src="./homepage/pods/4.avif" alt="" width="80" height="80">
+                            </div>
+                            <div class="inner">
+                                <img loading="lazy" src="./homepage/pods/5.avif" alt="" width="80" height="80">
+                            </div>
+                            <div class="inner">
+                                <img loading="lazy" src="./homepage/pods/6.avif" alt="" width="80" height="80">
+                            </div>
+                            <div class="inner">
+                                <img loading="lazy" src="./homepage/pods/7.avif" alt="" width="80" height="80">
+                            </div>
+                            <div class="inner">
+                                <img loading="lazy" src="./homepage/pods/8.avif" alt="" width="80" height="80">
+                            </div>
+                            <div class="inner">
+                                <img loading="lazy" src="./homepage/pods/9.avif" alt="" width="80" height="80">
+                            </div>
+                            <div class="inner">
+                                <img loading="lazy" src="./homepage/pods/10.webp" alt="" width="80" height="80">
+                            </div>
+                            <div class="inner">
+                                <img loading="lazy" src="./homepage/pods/11.avif" alt="" width="80" height="80">
+                            </div>
+                        </div>
+                        <button name="prev_button" class="prev">❮</button>
+                        <button name="next_button" class="next">❯</button>
                     </div>
-                    <div class="inner">
-                        <img loading="lazy" src="./homepage/pods/2.avif" alt="" width="80" height="80">
-                    </div>
-                    <div class="inner">
-                        <img loading="lazy" src="./homepage/pods/3.webp" alt="" width="80" height="80">
-                    </div>
-                    <div class="inner">
-                        <img loading="lazy" src="./homepage/pods/4.avif" alt="" width="80" height="80">
-                    </div>
-                    <div class="inner">
-                        <img loading="lazy" src="./homepage/pods/5.avif" alt="" width="80" height="80">
-                    </div>
-                    <div class="inner">
-                        <img loading="lazy" src="./homepage/pods/6.avif" alt="" width="80" height="80">
-                    </div>
-                    <div class="inner">
-                        <img loading="lazy" src="./homepage/pods/7.avif" alt="" width="80" height="80">
-                    </div>
-                    <div class="inner">
-                        <img loading="lazy" src="./homepage/pods/8.avif" alt="" width="80" height="80">
-                    </div>
-                    <div class="inner">
-                        <img loading="lazy" src="./homepage/pods/9.avif" alt="" width="80" height="80">
-                    </div>
-                    <div class="inner">
-                        <img loading="lazy" src="./homepage/pods/10.webp" alt="" width="80" height="80">
-                    </div>
-                    <div class="inner">
-                        <img loading="lazy" src="./homepage/pods/11.avif" alt="" width="80" height="80">
-                    </div>
-                    <button name="prev_button" class="press-prev prev">❮</button>
-                    <button name="next_button" class="press-next next">❯</button>
                 </div>
             </div>
         </div>

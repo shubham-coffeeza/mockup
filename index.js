@@ -6,9 +6,10 @@ document.addEventListener("DOMContentLoaded", function() {
   function isTabletDevice() {
     return /iPad/i.test(navigator.userAgent) || (/(tablet|ipad|playbook|silk)|(android(?!.*mobile))/i.test(navigator.userAgent));
   }
-  //screen loader start
+
+//screen loader start
   document.body.classList.add('loaded');
-  //screen loader end
+//screen loader end
 
 //brand logo animation start
   window.addEventListener('scroll', function() {
@@ -26,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 
-  // Function to check initial scroll position on page load
-  function checkInitialScrollPosition() {
+
+  function checkInitialScrollPosition() {  // Function to check initial scroll position on page load
       if (window.scrollY > 100) {
           document.querySelector('header').classList.add('already-scrolled');
       }
@@ -39,14 +40,14 @@ document.addEventListener("DOMContentLoaded", function() {
   // setTimeout(function() {
   //     document.querySelector('header').classList.add('scrolled');
   // }, 4000);
+
 //brand logo animation end
 
 //floating link start
   var isOpen = false;
   var startXFloat, startY;
-  var threshold = 50; // Minimum distance to be considered a swipe
+  var threshold = 50; 
   
-  // Event listener for the floating link button click
   document.querySelector(".floating-link-btn").addEventListener("click", function(){
       if (!isOpen) {
           openFloatingLinkWindow();
@@ -55,27 +56,23 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
   
-  // Function to open the floating link window
   function openFloatingLinkWindow() {
       document.querySelector(".floating-link-window").style.transform = "translate(0, -50%)";
       document.querySelector(".floating-link-btn").style.transform = "translateY(-50%) rotate(180deg)";
       isOpen = true;
   }
   
-  // Function to close the floating link window
   function closeFloatingLinkWindow() {
       document.querySelector(".floating-link-window").style.transform = "translate(240px, -50%)";
       document.querySelector(".floating-link-btn").style.transform = "translateY(-50%) rotate(0deg)";
       isOpen = false;
   }
   
-  // Event listener for touch start
   document.querySelector(".floating-link-btn").addEventListener("touchstart", function(e) {
       startXFloat = e.touches[0].clientX;
       startY = e.touches[0].clientY;
   });
   
-  // Event listener for touch end
   document.querySelector(".floating-link-btn").addEventListener("touchend", function(e) {
       var endX = e.changedTouches[0].clientX;
       var endY = e.changedTouches[0].clientY;
@@ -92,11 +89,10 @@ document.addEventListener("DOMContentLoaded", function() {
           }
       }
   });
-//floating link start
+//floating link End
 
 
 //Coupon Btn
-    
   document.querySelector(".coupon-btn-wrapper").addEventListener("click", function(){
       document.querySelector(".coupon").classList.add("active");
   });
@@ -112,7 +108,6 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelector(".header-banner-wrapper").addEventListener("click", function(){
       document.querySelector(".coupon").classList.remove("active");
   });
-    
 //Coupon Btn
 
 //hamburger
@@ -226,11 +221,11 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   document.querySelector(".exit-intent-popup, .exit-intent-popup .close").addEventListener("click", function(){
-  document.querySelector(".exit-intent-popup").style.display = "none";
-  
-  // Save the current time when the popup is closed
-  localStorage.setItem("exitIntentLastClosedTime", Date.now());
-});
+    document.querySelector(".exit-intent-popup").style.display = "none";
+    
+    // Save the current time when the popup is closed
+    localStorage.setItem("exitIntentLastClosedTime", Date.now());
+  });
 //Exit intent popup
 
 //Third Section
@@ -313,4 +308,40 @@ checkViewportVisibility();
     });
   });
 //Multi tab wrapper
+
+//Overflow scroll
+  const sliders = document.querySelectorAll(".scroll-slider-wrapper");
+  var sliderWidth = isMobileDevice() ? 1 : 0.3;
+
+  sliders.forEach(function(slider) {
+      const scrollLeftBtn = slider.querySelector(".prev");
+      const scrollRightBtn = slider.querySelector(".next");
+
+      scrollLeftBtn.addEventListener("click", function() {
+          const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+          const scrollAmount = -slider.offsetWidth * sliderWidth;
+          const newScrollLeft = slider.scrollLeft + scrollAmount;
+          console.log(maxScrollLeft, scrollAmount, newScrollLeft);
+          if (newScrollLeft >= 0) {
+              slider.scrollBy({
+                  left: scrollAmount,
+                  behavior: "smooth"
+              });
+          }
+      });
+
+      scrollRightBtn.addEventListener("click", function() {
+          const maxScrollRight = slider.scrollWidth;
+          const scrollAmount = slider.offsetWidth * sliderWidth;
+          const newScrollLeft = slider.scrollLeft + scrollAmount;
+          if (newScrollLeft < maxScrollRight) {
+              slider.scrollBy({
+                  left: scrollAmount,
+                  behavior: "smooth"
+              });
+          }
+      });
+  });
+//Overflow scroll
+
 });
