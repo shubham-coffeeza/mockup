@@ -1788,6 +1788,9 @@ footer .third p:last-child {
     font-size: 14px;
     letter-spacing: 1px;
   }
+  main .categories, main .brands, main .best-rated-wrapper, main .best-wrapper, main .what-wedo-wrapper, main .roadmap-wrapper, main .image-collage-wrapper, main .why-coffeeza-wrapper, main .collection-wrapper, main .multi-tabs-wrapper, main .everything-wrapper {
+    min-height: 50vh;
+  }
   main .third-section {
     padding: 100px 0 600px;
     position: relative;
@@ -1848,6 +1851,9 @@ footer .third p:last-child {
   }
   main .blogs-wrapper .blogs .d-grid {
     gap: 25px;
+  }
+  main .everything-wrapper {
+    min-height: 30vh;
   }
   footer .first .left p {
     font-size: 10px !important;
@@ -2348,6 +2354,7 @@ footer .third p:last-child {
   main .what-wedo-wrapper .what-wedo h2 {
     position: static;
     transform: rotate(0) translate(0);
+    text-shadow: 1px 1px 2px #cbcaca;
   }
   main .what-wedo-wrapper .what-wedo .mid {
     width: 100%;
@@ -2361,6 +2368,9 @@ footer .third p:last-child {
   main .what-wedo-wrapper .what-wedo .mid .top .inner {
     width: 100%;
   }
+  main .what-wedo-wrapper .what-wedo .mid .bottom img {
+    height: auto;
+  }
   main .what-wedo-wrapper .what-wedo .float {
     margin-top: 70px;
     width: 100%;
@@ -2371,6 +2381,10 @@ footer .third p:last-child {
   }
   main .roadmap-wrapper {
     padding: 50px 16px;
+    min-height: 50vh;
+  }
+  main .roadmap-wrapper .roadmap .desktop img {
+    height: auto;
   }
   main .image-collage-wrapper {
     padding: 50px 16px;
@@ -2470,6 +2484,7 @@ footer .third p:last-child {
   }
   main .everything-wrapper {
     padding: 50px 16px;
+    min-height: 50vh;
   }
   main .prod-card-wrapper {
     padding: 50px 15px;
@@ -2525,6 +2540,9 @@ footer .third p:last-child {
   }
   main .prod-card-wrapper .prod-card .products .mid .add-to-cart-wrapper .price-wrapper {
     flex-direction: column;
+  }
+  main .prod-card-wrapper .prod-card .products .mid .add-to-cart-wrapper .price-wrapper .price {
+    text-shadow: 0px 0px 0px #d8d8d8;
   }
   main .prod-card-wrapper .prod-card .products .mid .add-to-cart-wrapper .price-wrapper .discount {
     margin-left: 0px;
@@ -2629,56 +2647,57 @@ footer .third p:last-child {
   footer .first .flex-wrapper {
     flex-direction: column !important;
   }
-  footer .first .left {
+  footer .first .flex-wrapper .left {
     flex-direction: column !important;
     align-items: flex-start;
   }
-  footer .first .left p {
+  footer .first .flex-wrapper .left p {
     font-size: 10px !important;
     width: 100% !important;
   }
-  footer .first .left h2 {
+  footer .first .flex-wrapper .left h2 {
     font-size: 18px !important;
     width: 100% !important;
   }
-  footer .first .left input {
+  footer .first .flex-wrapper .left input {
     margin-left: 0 !important;
   }
-  footer .first .left .d-flex:first-child {
+  footer .first .flex-wrapper .left .d-flex:first-child {
     margin-bottom: 20px;
   }
-  footer .first .left button {
+  footer .first .flex-wrapper .left button {
     margin-left: 5px !important;
   }
-  footer .first .left .mobile-email-btn {
+  footer .first .flex-wrapper .left .mobile-email-btn {
     display: block !important;
     padding: 3px 0 0 !important;
     width: 60px !important;
   }
-  footer .first .left .mobile-email-btn svg {
+  footer .first .flex-wrapper .left .mobile-email-btn svg {
     fill: #fff;
     width: 30px;
     height: 30px;
   }
-  footer .first .left .desktop-email-btn {
+  footer .first .flex-wrapper .left .desktop-email-btn {
     display: none !important;
   }
-  footer .first .left .d-flex:nth-child(2) {
+  footer .first .flex-wrapper .left .d-flex:nth-child(2) {
     align-self: center;
     width: 100%;
+    margin-top: 10px;
   }
-  footer .first .right {
-    margin-top: 40px;
+  footer .first .flex-wrapper .right {
+    margin-top: 30px;
     width: 100%;
     display: flex;
     justify-content: space-around;
   }
-  footer .first .right svg {
+  footer .first .flex-wrapper .right svg {
     margin-left: 25px !important;
     width: 30px !important;
     height: 30px !important;
   }
-  footer .first .right svg:first-child {
+  footer .first .flex-wrapper .right svg:first-child {
     margin-left: 0 !important;
   }
   footer .second .left ul {
