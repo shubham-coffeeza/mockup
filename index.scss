@@ -225,7 +225,7 @@ body{
         position: absolute;
         left: 50%;
         top: 110%;
-        transform: translateX(-50%);
+        transform: translate(-50%, 0%);
         transition: all 0.8s cubic-bezier(0.8, 0, 0, 1) 0s;
         z-index: 1;
         h1{
@@ -250,7 +250,7 @@ body{
         position: absolute;
         left: 15px;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translate(0, -50%);
         h1{
             font-size: 35px;
             letter-spacing: 5px;
@@ -1827,7 +1827,6 @@ footer{
             }
         }
         .logo-wrapper{
-            top: 250%;
             img{
             }
             h1{
@@ -1836,7 +1835,7 @@ footer{
         .scrolled .logo-wrapper, .already-scrolled .logo-wrapper{
             left: 50%;
             top: 31px;
-            transform: translateX(-50%);
+            transform: translate(-50%, 0%);
         }
         .navbar-mobile{
             overflow: auto;
@@ -2236,7 +2235,7 @@ footer{
         .scrolled .logo-wrapper, .already-scrolled .logo-wrapper{
             left: 50%;
             top: 17px;
-            transform: translateX(-50%);
+            transform: translate(-50%, 0%);
             h1{
                 font-size: 22px;
                 letter-spacing: 5px !important;
