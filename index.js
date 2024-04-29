@@ -311,7 +311,7 @@ checkViewportVisibility();
 
 //Overflow scroll
   const sliders = document.querySelectorAll(".scroll-slider-wrapper");
-  var sliderWidth = isMobileDevice() ? 1 : 0.3;
+  var sliderWidth = isMobileDevice() ? 1 : 0.5;
 
   sliders.forEach(function(slider) {
       const scrollLeftBtn = slider.querySelector(".prev");
@@ -321,8 +321,8 @@ checkViewportVisibility();
           const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
           const scrollAmount = -slider.offsetWidth * sliderWidth;
           const newScrollLeft = slider.scrollLeft + scrollAmount;
-          console.log(maxScrollLeft, scrollAmount, newScrollLeft);
-          if (newScrollLeft >= 0) {
+          console.log(maxScrollLeft, scrollAmount, newScrollLeft, slider.scrollLeft);
+          if (newScrollLeft >= -200) {
               slider.scrollBy({
                   left: scrollAmount,
                   behavior: "smooth"
@@ -333,8 +333,9 @@ checkViewportVisibility();
       scrollRightBtn.addEventListener("click", function() {
           const maxScrollRight = slider.scrollWidth;
           const scrollAmount = slider.offsetWidth * sliderWidth;
-          const newScrollLeft = slider.scrollLeft + scrollAmount;
-          if (newScrollLeft < maxScrollRight) {
+          const newScrollRight = slider.scrollLeft + scrollAmount;
+          console.log(maxScrollRight, scrollAmount, newScrollRight, slider.scrollLeft);  
+          if (newScrollRight < maxScrollRight) {
               slider.scrollBy({
                   left: scrollAmount,
                   behavior: "smooth"
