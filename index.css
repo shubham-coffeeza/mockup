@@ -379,7 +379,7 @@ main .f-width-img .text-wrapper button {
   border-radius: 4px;
   text-transform: uppercase;
   padding: 10px 20px;
-  color: #333;
+  color: #000;
   font-weight: 600;
 }
 main .brands {
@@ -676,7 +676,8 @@ main .bestseller-wrapper .details button {
   border: #72c8f7;
   padding: 10px 20px;
   margin-top: 40px;
-  color: #fff;
+  color: #000;
+  font-weight: 600;
 }
 main .instagram h2 {
   padding-bottom: 60px;
@@ -841,7 +842,8 @@ main .what-wedo-wrapper .what-wedo h2 {
   position: absolute;
   left: -8%;
   top: 50%;
-  color: lightgray;
+  color: gray;
+  text-shadow: 1px 1px 6px #7b7b7b;
 }
 main .what-wedo-wrapper .what-wedo .mid {
   width: 85%;
@@ -982,8 +984,9 @@ main .why-coffeeza-wrapper .why-coffeeza .flex p {
   text-align: center;
 }
 main .why-coffeeza-wrapper .why-coffeeza .flex p:last-child {
-  color: gray;
+  color: black;
   font-style: italic;
+  font-weight: 600;
 }
 main .collection-wrapper .collection .first {
   width: 100%;
@@ -1046,13 +1049,13 @@ main .multi-tabs-wrapper .multi-tabs .tabs-primary .collection-click {
 }
 main .multi-tabs-wrapper .multi-tabs .tabs-primary .collection-click h3 {
   text-align: center;
-  color: rgba(51, 51, 51, 0.6039215686);
+  color: #333;
 }
 main .multi-tabs-wrapper .multi-tabs .tabs-primary .collection-click.active {
   border-bottom: 1px solid gray;
 }
 main .multi-tabs-wrapper .multi-tabs .tabs-primary .collection-click.active h3 {
-  color: #333;
+  color: #000;
 }
 main .multi-tabs-wrapper .multi-tabs .tabs-secondary img {
   max-width: 100%;
@@ -1135,6 +1138,7 @@ main .prod-card-wrapper .prod-card .products .top .label-one {
   padding: 4px 15px;
   border-radius: 10px 8px 8px 0;
   color: white;
+  font-weight: 600;
   font-size: 14px;
 }
 main .prod-card-wrapper .prod-card .products .top .label-two {
@@ -1208,13 +1212,14 @@ main .prod-card-wrapper .prod-card .products .mid .add-to-cart-wrapper .price-wr
 main .prod-card-wrapper .prod-card .products .mid .add-to-cart-wrapper .price-wrapper .price {
   font-weight: 700;
   letter-spacing: 1px;
+  text-shadow: 1px 1px 3px #818181;
 }
 main .prod-card-wrapper .prod-card .products .mid .add-to-cart-wrapper .price-wrapper .discount {
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1px;
   font-size: 11px;
   align-self: flex-end;
-  color: gray;
+  color: #333;
   position: relative;
   margin-left: 5px;
 }
@@ -1561,6 +1566,7 @@ footer .second .left {
 }
 footer .second .left ul h3 {
   color: #d17c0c;
+  font-size: 20px;
 }
 footer .second .left ul li {
   list-style-type: none;
@@ -2026,13 +2032,13 @@ footer .third p:last-child {
     display: block;
   }
   .header-banner-wrapper .navbar-mobile .close-btn {
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
     cursor: pointer;
     width: 25px;
     height: 25px;
-    fill: #fff;
+    fill: #000;
   }
   .header-banner-wrapper .navbar-mobile .banner, .header-banner-wrapper .navbar-mobile .banner-2, .header-banner-wrapper .navbar-mobile .banner-3 {
     width: 100%;
