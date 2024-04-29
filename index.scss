@@ -226,7 +226,7 @@ body{
         // left: 50%;
         // top: 110%;
         // transform: translate(-50%, 0%);
-        transition: all 0.8s cubic-bezier(0.8, 0, 0, 1) 0s;
+        transition: all 4.8s cubic-bezier(0.8, 0, 0, 1) 0s;
         z-index: 1;
         h1{
             font-weight: 400;
@@ -243,7 +243,7 @@ body{
         img{
             // width: 500px;
             // height: 130px;
-            transition: width 1.3s cubic-bezier(0.8, 0, 0, 1) 0s, height 0.8s cubic-bezier(0.8, 0, 0, 1) 0s;
+            transition: width 5.3s cubic-bezier(0.8, 0, 0, 1) 0s, height 3.8s cubic-bezier(0.8, 0, 0, 1) 0s;
         }
     }
     .scrolled .logo-wrapper, .already-scrolled .logo-wrapper{

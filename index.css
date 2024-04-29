@@ -218,7 +218,7 @@ body {
 }
 .header-banner-wrapper .logo-wrapper {
   position: absolute;
-  transition: all 0.8s cubic-bezier(0.8, 0, 0, 1) 0s;
+  transition: all 4.8s cubic-bezier(0.8, 0, 0, 1) 0s;
   z-index: 1;
 }
 .header-banner-wrapper .logo-wrapper h1 {
@@ -230,7 +230,7 @@ body {
   transition: opacity 0.8s cubic-bezier(0.8, 0, 0, 1) 0s, letter-spacing 2.2s cubic-bezier(0.8, 0, 0, 1) 0s, transform 0.8s cubic-bezier(0.8, 0, 0, 1) 0s, font-size 0.8s cubic-bezier(0.8, 0, 0, 1) 0s;
 }
 .header-banner-wrapper .logo-wrapper img {
-  transition: width 1.3s cubic-bezier(0.8, 0, 0, 1) 0s, height 0.8s cubic-bezier(0.8, 0, 0, 1) 0s;
+  transition: width 5.3s cubic-bezier(0.8, 0, 0, 1) 0s, height 3.8s cubic-bezier(0.8, 0, 0, 1) 0s;
 }
 .header-banner-wrapper .scrolled .logo-wrapper, .header-banner-wrapper .already-scrolled .logo-wrapper {
   position: absolute;
