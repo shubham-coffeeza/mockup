@@ -1137,7 +1137,7 @@ main{
                 justify-content: space-around;
                 align-items: center;
                 padding-bottom: 20px;
-                border-bottom: 2px solid black;
+                border-bottom: 2px solid #c4c4c4;
                 margin-bottom: 50px;
                 .collection-click{
                     cursor: pointer;
@@ -1145,7 +1145,7 @@ main{
                     border-bottom: 1px solid transparent;
                     h3{
                         text-align: center;
-                        color: #333;
+                        color: #555;
                     }
                     &.active{
                         border-bottom: 1px solid gray;
@@ -1162,9 +1162,9 @@ main{
                     border-radius: 4px;
                 }
                 .best-rated-view, .coffee-capsules, .coffee-machines, .merch{
-                    display: grid;
-                    grid-template-columns: auto auto auto;
-                    gap: 30px;
+                    // display: grid;
+                    // grid-template-columns: auto auto auto;
+                    // gap: 30px;
                 }
             }
         }
@@ -1234,13 +1234,13 @@ main{
             scroll-behavior: smooth;
         }
     }
-    .prod-card-wrapper{
         .prod-card{
             display: grid;
             grid-template-columns: auto auto auto;
             column-gap: 30px;
-            row-gap: 50px;
+            row-gap: 30px;
             .products{
+                background: white;
                 border-radius: 10px;
                 box-shadow: 2px 4px 12px #00000014;
                 display: flex;
@@ -1257,7 +1257,7 @@ main{
                     width: 100%;
                     img{
                         width: 100%;
-                        height: 300px;
+                        height: 250px;
                         border-radius: 10px 10px 0 0;
                     }
                     .label-one{
@@ -1386,7 +1386,6 @@ main{
                 }
             }
         }
-    }
                                                                  
 }
 
@@ -2163,7 +2162,7 @@ footer{
                 }
             }
         }
-        .prod-card-wrapper .prod-card{
+        .prod-card{
             grid-template-columns: auto auto;
         }
         .why-coffeeza-wrapper{
@@ -2831,9 +2830,10 @@ footer{
             } 
         }       
         .multi-tabs-wrapper{
-            padding: 50px 16px;
+            padding: 50px 0;
             .multi-tabs{
                 .tabs-primary{
+                    padding: 0 16px;
                     flex-wrap: wrap;
                     .collection-click{
                         padding: 5px 5px;
@@ -2846,11 +2846,19 @@ footer{
                     img{
                     }
                     .best-rated-view, .coffee-capsules, .coffee-machines, .merch{
-                        display: grid;
-                        grid-template-columns: auto auto;
-                        gap: 15px;
-                        max-height: 450px;
+                        // display: grid;
+                        // grid-template-columns: auto auto;
+                        // gap: 15px;
+                        // max-height: 450px;
+                        padding: 15px;
                         overflow: scroll;
+                        scroll-behavior: smooth;
+                        .prod-card{
+                            grid-template-columns: repeat(6, 90%);
+                            .products .top img{
+                                height: 250px;
+                            }
+                        }
                     }
                 }
             }
@@ -2862,87 +2870,88 @@ footer{
                 
             }
         }
-        .prod-card-wrapper{
-            padding: 50px 15px;
-            .prod-card{
-                display: grid;
-                grid-template-columns: auto auto;
-                column-gap: 15px;
-                row-gap: 25px;
-                .products{
-                    border-radius: 8px;
-                    box-shadow: 2px 4px 12px #00000014;
-                    .top{
-                        img{
-                            max-width: 100%;
-                            height: auto;
-                        }
-                    }  
-                    .mid{
-                        padding: 20px 15px 30px 15px;
-                        .label-three{
-                            background-color: #feda79;
-                            max-width: fit-content;
-                            padding: 3px 8px;
-                            border-radius: 4px;
-                            font-size: 14px;
-                            font-weight: 600;
-                            margin-bottom: 15px;
-                        }
-                        .prod-heading{
-                            font-size: 14px;
-                        }
-                        .prod-desc{
-                            font-size: 12px;
-                            font-weight: 500;
-                            margin-bottom: 10px;
-                        }
-                        .add-to-cart-wrapper{
-                            flex-direction: row-reverse;
-                            height: 30px;
-                            padding: 10px 15px;
-                            .cart-label{
-                                display: none;
-                            }
-                            svg{
-                                display: block;
-                                width: 30px;
-                                height: 30px;
-                            }
-                            .price-wrapper{
-                                flex-direction: column;
-                                .price{
-                                    text-shadow: 0px 0px 0px #d8d8d8;
-                                }
-                                .discount{
-                                    margin-left: 0px;
-                                }
-                            }
-                        }
+        
+        .prod-card{
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 8px;
+            row-gap: 8px;
+            .products{
+                border-radius: 8px;
+                box-shadow: 2px 4px 12px #00000014;
+                .top{
+                    img{
+                        max-width: 100%;
+                        height: 150px;
                     }
-                    .more-details-wrapper{
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding: 15px 0 15px;
-                        border-top: 1px solid #dbdbdb;
-                        width: calc(100% - 30px);
-                        .more-details{
+                }  
+                .mid{
+                    padding: 15px 8px 15px 8px;
+                    .label-three{
+                        background-color: #feda79;
+                        max-width: fit-content;
+                        padding: 3px 8px;
+                        border-radius: 4px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        margin-bottom: 15px;
+                    }
+                    .prod-heading{
+                        font-size: 14px;
+                    }
+                    .prod-desc{
+                        font-size: 12px;
+                        font-weight: 500;
+                        margin-bottom: 10px;
+                    }
+                    .add-to-cart-wrapper{
+                        flex-direction: row-reverse;
+                        height: 30px;
+                        padding: 10px 15px;
+                        .cart-label{
+                            display: none;
+                        }
+                        svg{
+                            display: block;
+                            width: 30px;
+                            height: 30px;
+                        }
+                        .price-wrapper{
                             flex-direction: column;
-                            img{
-                                max-width: 100%;
-                                height: auto;
-                                margin-right: 0px;
-                                margin-bottom: 5px;
+                            .price{
+                                text-shadow: 0px 0px 0px #d8d8d8;
                             }
-                            p{
-                                font-size: 10px;
-                                font-weight: 600;
+                            .discount{
+                                margin-left: 0px;
                             }
                         }
                     }
                 }
+                .more-details-wrapper{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 15px 0 15px;
+                    border-top: 1px solid #dbdbdb;
+                    width: calc(100% - 16px);
+                    .more-details{
+                        flex-direction: column;
+                        img{
+                            max-width: 100%;
+                            height: auto;
+                            margin-right: 0px;
+                            margin-bottom: 5px;
+                        }
+                        p{
+                            font-size: 10px;
+                            font-weight: 600;
+                        }
+                    }
+                }
             }
+        }
+        .prod-card-wrapper{
+            padding: 50px 15px;
         }
     } 
     .coupon-wrapper{
