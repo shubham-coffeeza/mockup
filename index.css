@@ -2005,6 +2005,8 @@ footer .third p:last-child {
   }
   .header-banner-wrapper .logo-wrapper {
     top: 250%;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
   .header-banner-wrapper .logo-wrapper img {
     width: 300px;
