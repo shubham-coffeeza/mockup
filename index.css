@@ -254,6 +254,9 @@ body {
   height: 38px;
 }
 
+main {
+  padding: 100px 0;
+}
 main .main-div {
   padding: 100px 0;
   min-height: calc(100vh - 100px);
@@ -349,6 +352,7 @@ main .categories .categories-wrapper .category h3 {
   letter-spacing: 4px;
 }
 main .f-width-img {
+  margin: 100px 0;
   height: 400px;
   background-image: url("./homepage/shutterstock_1727031229.jpg");
   background-repeat: no-repeat;
@@ -390,7 +394,7 @@ main .f-width-img .text-wrapper button {
 }
 main .brands {
   position: relative;
-  min-height: 70vh;
+  min-height: 30vh;
 }
 main .brands .brand-btn-wrapper {
   overflow-x: scroll;
@@ -471,6 +475,7 @@ main .brands .prev, main .brands .next {
 }
 main .third-section {
   padding: 100px 0 500px;
+  margin: 100px 0;
   background-color: #000;
   position: relative;
 }
@@ -1062,11 +1067,17 @@ main .multi-tabs-wrapper .multi-tabs .tabs-secondary img {
   height: auto;
   border-radius: 4px;
 }
+main .multi-tabs-wrapper .multi-tabs .tabs-secondary .scroll-slider-wrapper {
+  margin: 0 -15px;
+}
 main .multi-tabs-wrapper .multi-tabs .tabs-secondary .best-rated-view, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-capsules, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-machines, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .merch {
   overflow: hidden;
 }
 main .multi-tabs-wrapper .multi-tabs .tabs-secondary .best-rated-view .prev, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .best-rated-view .next, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-capsules .prev, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-capsules .next, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-machines .prev, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-machines .next, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .merch .prev, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .merch .next {
   display: none;
+}
+main .multi-tabs-wrapper .multi-tabs .tabs-secondary .best-rated-view .prod-card, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-capsules .prod-card, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-machines .prod-card, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .merch .prod-card {
+  padding: 15px;
 }
 main .everything-wrapper .everything {
   padding-bottom: 30px;
@@ -1118,7 +1129,7 @@ main .prod-card .products .top {
 }
 main .prod-card .products .top img {
   width: 100%;
-  height: 250px;
+  height: 300px;
   border-radius: 10px 10px 0 0;
 }
 main .prod-card .products .top .label-one {
@@ -1288,7 +1299,7 @@ main .scroll-slider-wrapper .next {
   animation: slider-btn-right 2s linear infinite;
 }
 main .four-main-cat-wrapper {
-  padding: 100px 0 0;
+  padding: 100px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2029,6 +2040,12 @@ footer .third p:last-child {
     font-size: 14px;
     letter-spacing: 2px;
   }
+  main .multi-tabs-wrapper .multi-tabs .tabs-secondary .scroll-slider-wrapper {
+    margin: 0;
+  }
+  main .multi-tabs-wrapper .multi-tabs .tabs-secondary .best-rated-view .prod-card, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-capsules .prod-card, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-machines .prod-card, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .merch .prod-card {
+    padding: 0;
+  }
 }
 @media screen and (max-width: 545px) {
   .promo-wrapper {
@@ -2208,6 +2225,9 @@ footer .third p:last-child {
     width: 25px;
     height: 25px;
   }
+  main {
+    padding: 50px 0;
+  }
   main .main-div {
     padding: 50px 0;
     min-height: 80vh;
@@ -2238,6 +2258,7 @@ footer .third p:last-child {
   }
   main .f-width-img {
     background-position-x: center;
+    margin: 50px 0;
   }
   main .f-width-img .text-wrapper h2 {
     font-size: 18px;
@@ -2277,6 +2298,7 @@ footer .third p:last-child {
   }
   main .third-section {
     padding: 100px 0 300px;
+    margin: 50px 0;
     position: relative;
   }
   main .third-section .main-heading {
@@ -2308,6 +2330,9 @@ footer .third p:last-child {
   main .third-section img {
     bottom: 55%;
   }
+  main .best-rated-wrapper {
+    min-height: 70vh;
+  }
   main .best-rated-wrapper .main-div-inside .best-rated-products .best-product .heading {
     font-family: "montserrat";
     font-size: 22px;
@@ -2334,7 +2359,7 @@ footer .third p:last-child {
   }
   main .brands {
     padding: 50px 16px;
-    min-height: 50vh;
+    min-height: 30vh;
   }
   main .bestseller-wrapper {
     padding: 50px 0;
@@ -2372,10 +2397,12 @@ footer .third p:last-child {
     width: 250px;
     height: 400px;
   }
+  main .blogs-wrapper .blogs {
+    padding: 0 16px;
+  }
   main .blogs-wrapper .blogs .blog-one {
     height: 150px;
     margin-bottom: 30px;
-    border-radius: 0;
   }
   main .blogs-wrapper .blogs .blog-one .inner button {
     padding: 5px 12px;
@@ -2387,7 +2414,6 @@ footer .third p:last-child {
   main .blogs-wrapper .blogs .d-grid {
     grid-template-columns: auto;
     gap: 40px;
-    padding: 0 16px;
   }
   main .blogs-wrapper .blogs .blog-three, main .blogs-wrapper .blogs .blog-four {
     display: none;
@@ -2475,7 +2501,7 @@ footer .third p:last-child {
   }
   main .roadmap-wrapper {
     padding: 50px 16px;
-    min-height: 50vh;
+    min-height: 25vh;
   }
   main .roadmap-wrapper .roadmap .desktop {
     display: none;
@@ -2502,6 +2528,7 @@ footer .third p:last-child {
   }
   main .image-collage-wrapper {
     padding: 50px 16px;
+    min-height: 65vh;
   }
   main .image-collage-wrapper .image-collage {
     width: 100%;
@@ -2542,6 +2569,7 @@ footer .third p:last-child {
   }
   main .why-coffeeza-wrapper {
     padding: 50px 16px;
+    min-height: 65vh;
   }
   main .why-coffeeza-wrapper .why-coffeeza .flex {
     display: flex;
@@ -2618,7 +2646,7 @@ footer .third p:last-child {
   }
   main .everything-wrapper {
     padding: 50px 16px;
-    min-height: 50vh;
+    min-height: 30vh;
   }
   main .prod-card {
     display: grid;
@@ -2703,7 +2731,7 @@ footer .third p:last-child {
     padding: 50px 15px;
   }
   main .four-main-cat-wrapper {
-    padding: 50px 16px 0;
+    padding: 50px 16px;
   }
   main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat {
     gap: 8px;
@@ -2728,6 +2756,9 @@ footer .third p:last-child {
     display: block;
     color: #fff;
     top: 50%;
+  }
+  main .video-bg {
+    min-height: 70vh;
   }
   .coupon-wrapper {
     left: -60px;
