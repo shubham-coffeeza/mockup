@@ -97,6 +97,7 @@ body {
   }
   .header-banner-wrapper {
     background-image: url("./hero.jpg") !important;
+    background-position-y: center;
   }
 }
 @media (min-width: 992px) {
@@ -320,6 +321,9 @@ main .floating-link-window .link a {
 main .floating-link-window .floating-link-btn {
   display: none;
 }
+main .categories {
+  min-height: unset;
+}
 main .categories .categories-wrapper {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -419,24 +423,7 @@ main .brands .brand-wrapper .brand img {
   box-shadow: 0px 0px 10px #d1cece;
 }
 main .brands .prev, main .brands .next {
-  position: absolute;
-  top: 35%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0);
-  color: #585757;
-  font-size: 60px;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 0;
-}
-main .brands .prev {
-  left: 0;
-  animation: slider-btn-left 2s linear infinite;
-}
-main .brands .next {
-  right: 0;
-  animation: slider-btn-right 2s linear infinite;
+  top: 40% !important;
 }
 @keyframes slider-btn-left {
   0% {
@@ -1075,7 +1062,14 @@ main .multi-tabs-wrapper .multi-tabs .tabs-secondary img {
   height: auto;
   border-radius: 4px;
 }
+main .multi-tabs-wrapper .multi-tabs .tabs-secondary .best-rated-view, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-capsules, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-machines, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .merch {
+  overflow: hidden;
+}
+main .multi-tabs-wrapper .multi-tabs .tabs-secondary .best-rated-view .prev, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .best-rated-view .next, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-capsules .prev, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-capsules .next, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-machines .prev, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-machines .next, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .merch .prev, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .merch .next {
+  display: none;
+}
 main .everything-wrapper .everything {
+  padding-bottom: 30px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -1094,43 +1088,8 @@ main .everything-wrapper .everything .inner {
 main .everything-wrapper .everything .inner img {
   border-radius: 50%;
 }
-main .everything-wrapper .everything::-webkit-scrollbar {
-  height: 8px;
-}
-main .everything-wrapper .everything::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgb(99, 99, 99);
-  border-radius: 10px;
-}
-main .everything-wrapper .everything::-webkit-scrollbar-thumb {
-  background: #000;
-  border-radius: 10px;
-}
-main .everything-wrapper .everything::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
-}
 main .everything-wrapper .relative .prev, main .everything-wrapper .relative .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0);
-  color: #585757;
-  font-size: 60px;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 0;
-}
-main .everything-wrapper .relative .prev {
-  left: 0;
-  animation: slider-btn-left 2s linear infinite;
-}
-main .everything-wrapper .relative .next {
-  right: 0;
-  animation: slider-btn-right 2s linear infinite;
-}
-main .everything-wrapper .scroll-slider-wrapper {
-  overflow: auto;
-  scroll-behavior: smooth;
+  top: 38% !important;
 }
 main .prod-card {
   display: grid;
@@ -1285,6 +1244,98 @@ main .prod-card .products .more-details-wrapper .more-details img {
 }
 main .prod-card .products .more-details-wrapper .more-details p {
   font-size: 14px;
+}
+main .scroll-slider-wrapper {
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+main .scroll-slider-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+main .scroll-slider-wrapper::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(99, 99, 99);
+  border-radius: 6px;
+}
+main .scroll-slider-wrapper::-webkit-scrollbar-thumb {
+  background: #8c8c8c;
+  border-radius: 6px;
+}
+main .scroll-slider-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #454545;
+}
+main .scroll-slider-wrapper .prev:hover, main .scroll-slider-wrapper .next:hover {
+  color: #000;
+  opacity: 1;
+}
+main .scroll-slider-wrapper .prev, main .scroll-slider-wrapper .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  color: #585757;
+  font-size: 60px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 0;
+}
+main .scroll-slider-wrapper .prev {
+  left: 0;
+  animation: slider-btn-left 2s linear infinite;
+}
+main .scroll-slider-wrapper .next {
+  right: 0;
+  animation: slider-btn-right 2s linear infinite;
+}
+main .four-main-cat-wrapper {
+  padding: 100px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .four-main-cat-wrapper .main-div-inside {
+  overflow-Y: hidden;
+}
+main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 15px;
+}
+main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .capsules, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .machines, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .ground-coffee, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .pour-over-bags {
+  position: relative;
+}
+main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .capsules::after, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .machines::after, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .ground-coffee::after, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .pour-over-bags::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5019607843);
+  border-radius: 8px;
+}
+main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .capsules img, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .machines img, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .ground-coffee img, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .pour-over-bags img {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .capsules h2, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .machines h2, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .ground-coffee h2, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .pour-over-bags h2 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 10px #000;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+main .four-main-cat-wrapper .scroll-slider-wrapper .prev, main .four-main-cat-wrapper .scroll-slider-wrapper .next {
+  display: none;
 }
 
 #loading-overlay {
@@ -1890,6 +1941,10 @@ footer .third p:last-child {
   main .everything-wrapper {
     min-height: 30vh;
   }
+  main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .capsules h2, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .machines h2, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .ground-coffee h2, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .pour-over-bags h2 {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
   footer .first .left p {
     font-size: 10px !important;
     width: 240px !important;
@@ -1969,6 +2024,10 @@ footer .third p:last-child {
   }
   main .main-div.categories .categories-wrapper {
     grid-template-columns: auto auto auto;
+  }
+  main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .capsules h2, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .machines h2, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .ground-coffee h2, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .pour-over-bags h2 {
+    font-size: 14px;
+    letter-spacing: 2px;
   }
 }
 @media screen and (max-width: 545px) {
@@ -2173,6 +2232,9 @@ footer .third p:last-child {
     letter-spacing: 0px;
     margin-top: 10px;
     width: 90%;
+  }
+  main .categories {
+    min-height: unset;
   }
   main .f-width-img {
     background-position-x: center;
@@ -2415,8 +2477,28 @@ footer .third p:last-child {
     padding: 50px 16px;
     min-height: 50vh;
   }
-  main .roadmap-wrapper .roadmap .desktop img {
+  main .roadmap-wrapper .roadmap .desktop {
+    display: none;
+  }
+  main .roadmap-wrapper .roadmap {
+    position: relative;
+  }
+  main .roadmap-wrapper .roadmap .mobile {
+    display: block;
+  }
+  main .roadmap-wrapper .roadmap .mobile .cl {
+    display: grid;
+    margin-bottom: 20px;
+    grid-template-columns: 100% 100% 100% 100% 100%;
+    gap: 0;
+    width: 100%;
+  }
+  main .roadmap-wrapper .roadmap .mobile .cl img {
+    width: 100%;
     height: auto;
+  }
+  main .roadmap-wrapper .roadmap .mobile .prev, main .roadmap-wrapper .roadmap .mobile .next {
+    top: 35%;
   }
   main .image-collage-wrapper {
     padding: 50px 16px;
@@ -2473,26 +2555,9 @@ footer .third p:last-child {
   main .why-coffeeza-wrapper .why-coffeeza .flex p, main .why-coffeeza-wrapper .why-coffeeza .flex h4 {
     width: 300px;
   }
-  main .why-coffeeza-wrapper .relative .prev {
-    left: 0;
-    animation: slider-btn-left 2s linear infinite;
-  }
-  main .why-coffeeza-wrapper .relative .next {
-    right: 0;
-    animation: slider-btn-right 2s linear infinite;
-  }
   main .why-coffeeza-wrapper .relative .prev, main .why-coffeeza-wrapper .relative .next {
     display: block;
-    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    color: rgba(51, 51, 51, 0.6039215686);
-    border: none;
-    cursor: pointer;
-    z-index: 0;
-    font-size: 100px;
-    transition: all 0.5s ease;
   }
   main .collection-wrapper {
     padding: 50px 16px;
@@ -2516,26 +2581,9 @@ footer .third p:last-child {
   main .collection-wrapper .collection .second {
     width: 100%;
   }
-  main .collection-wrapper .collection .relative .prev {
-    left: 0;
-    animation: slider-btn-left 2s linear infinite;
-  }
-  main .collection-wrapper .collection .relative .next {
-    right: 0;
-    animation: slider-btn-right 2s linear infinite;
-  }
   main .collection-wrapper .collection .relative .prev, main .collection-wrapper .collection .relative .next {
     display: block;
-    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    color: rgba(51, 51, 51, 0.6039215686);
-    border: none;
-    cursor: pointer;
-    z-index: 0;
-    font-size: 100px;
-    transition: all 0.5s ease;
   }
   main .collection-wrapper .collection .scroll-slider-wrapper {
     overflow: auto;
@@ -2556,7 +2604,7 @@ footer .third p:last-child {
   }
   main .multi-tabs-wrapper .multi-tabs .tabs-secondary .best-rated-view, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-capsules, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-machines, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .merch {
     padding: 15px;
-    overflow: scroll;
+    overflow-X: scroll;
     scroll-behavior: smooth;
   }
   main .multi-tabs-wrapper .multi-tabs .tabs-secondary .best-rated-view .prod-card, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-capsules .prod-card, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-machines .prod-card, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .merch .prod-card {
@@ -2564,6 +2612,9 @@ footer .third p:last-child {
   }
   main .multi-tabs-wrapper .multi-tabs .tabs-secondary .best-rated-view .prod-card .products .top img, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-capsules .prod-card .products .top img, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-machines .prod-card .products .top img, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .merch .prod-card .products .top img {
     height: 250px;
+  }
+  main .multi-tabs-wrapper .multi-tabs .tabs-secondary .best-rated-view .prev, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .best-rated-view .next, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-capsules .prev, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-capsules .next, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-machines .prev, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .coffee-machines .next, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .merch .prev, main .multi-tabs-wrapper .multi-tabs .tabs-secondary .merch .next {
+    display: block;
   }
   main .everything-wrapper {
     padding: 50px 16px;
@@ -2650,6 +2701,33 @@ footer .third p:last-child {
   }
   main .prod-card-wrapper {
     padding: 50px 15px;
+  }
+  main .four-main-cat-wrapper {
+    padding: 50px 16px 0;
+  }
+  main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat {
+    gap: 8px;
+    grid-template-columns: 48% 48% 48% 48%;
+  }
+  main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .capsules img, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .machines img, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .ground-coffee img, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .pour-over-bags img {
+    position: relative;
+    z-index: -2;
+  }
+  main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .capsules h2, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .machines h2, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .ground-coffee h2, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .pour-over-bags h2 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    width: 80%;
+    max-width: unset;
+    top: 42%;
+    z-index: 0;
+  }
+  main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .capsules::after, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .machines::after, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .ground-coffee::after, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .pour-over-bags::after {
+    z-index: -1;
+  }
+  main .four-main-cat-wrapper .scroll-slider-wrapper .prev, main .four-main-cat-wrapper .scroll-slider-wrapper .next {
+    display: block;
+    color: #fff;
+    top: 50%;
   }
   .coupon-wrapper {
     left: -60px;

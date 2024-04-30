@@ -167,6 +167,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function nextSlide() {
     currentSlide = (currentSlide + 1) % totalSlides;
     showSlide(currentSlide);
+    setTimeout(nextSlide, 6000);
   }
 
   function prevSlide() {
@@ -200,6 +201,9 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelector(".slides").addEventListener("touchstart", startDrag);
   document.querySelector(".slides").addEventListener("touchmove", drag);
   document.querySelector(".slides").addEventListener("touchend", endDrag);
+  
+  setTimeout(nextSlide, 6000);
+
 //Best rated slider
 
 //Exit intent popup
