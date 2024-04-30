@@ -349,4 +349,20 @@ checkViewportVisibility();
   });
 //Overflow scroll
 
+//Navbar Hover
+  var navs = document.querySelectorAll(".navbar-link");
+  navs.forEach(function(nav, index) {
+    var relatedDiv = document.getElementById("show-nav-" + (index + 1));
+    var parentDiv = document.querySelector(".navbar-dropdown-wrapper");
+    nav.addEventListener('mouseenter', function() {
+        relatedDiv.classList.add('hovered');
+        parentDiv.classList.add('hovered');
+    });
+    nav.addEventListener('mouseleave', function() {
+        relatedDiv.classList.remove('hovered');
+        parentDiv.classList.remove('hovered');
+    });
+  });
+//Navbar Hover
+
 });
