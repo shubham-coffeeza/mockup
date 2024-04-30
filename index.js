@@ -353,12 +353,26 @@ checkViewportVisibility();
   var navs = document.querySelectorAll(".navbar-link");
   navs.forEach(function(nav, index) {
     var relatedDiv = document.getElementById("show-nav-" + (index + 1));
-    var parentDiv = document.querySelector(".navbar-dropdown-wrapper");
+    var parentDiv = document.getElementById("navbar-wrapper-" + (index + 1));
     nav.addEventListener('mouseenter', function() {
         relatedDiv.classList.add('hovered');
         parentDiv.classList.add('hovered');
     });
     nav.addEventListener('mouseleave', function() {
+        relatedDiv.classList.remove('hovered');
+        parentDiv.classList.remove('hovered');
+    });
+  });
+
+  var navWrappers = document.querySelectorAll(".navbar-dropdown-wrapper");
+  navWrappers.forEach(function(navWrapper, index) {
+    var relatedDiv = document.getElementById("show-nav-" + (index + 1));
+    var parentDiv = document.getElementById("navbar-wrapper-" + (index + 1));
+    navWrapper.addEventListener('mouseenter', function() {
+        relatedDiv.classList.add('hovered');
+        parentDiv.classList.add('hovered');
+    });
+    navWrapper.addEventListener('mouseleave', function() {
         relatedDiv.classList.remove('hovered');
         parentDiv.classList.remove('hovered');
     });

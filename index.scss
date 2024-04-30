@@ -144,6 +144,7 @@ body{
                 font-size: 14px;
                 font-weight: 300;
                 letter-spacing: 2px;
+                padding: 42px 0;
                 cursor: pointer;
                 &:last-child{
                     margin: 0;
@@ -990,7 +991,7 @@ main{
             top: 50%;
             left: 35%;
             transform: translate(-50%, -50%) rotateY(180deg);
-            z-index: 1;
+            z-index: 0;
         }
         .details{
             width: 50%;
@@ -1424,7 +1425,7 @@ main{
                     top: 10%;
                     left: 50%;
                     transform: translateX(-50%);
-                    z-index: 1;
+                    z-index: 0;
                     color: #021b61;
                     text-align: center;
                 }
@@ -1741,6 +1742,7 @@ main{
                     &::after{
                         content: "";
                         position: absolute;
+                        z-index: -1;
                         top: 0;
                         left: 0;
                         right: 0;
@@ -1752,6 +1754,8 @@ main{
                         border-radius: 8px;
                         width: 100%;
                         height: 100%;
+                        position: relative;
+                        z-index: -2;
                     }
                     h2{
                         font-size: 18px;
@@ -1765,7 +1769,7 @@ main{
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%);
-                        z-index: 1;
+                        z-index: 0;
                     }
                 }
             }
@@ -2031,7 +2035,7 @@ main{
 footer{
     background-color: #111;
     color: #fff;
-    z-index: 1;
+    z-index: 0;
     position: relative;                                                                                             
     .first{
         background-color: #353535;

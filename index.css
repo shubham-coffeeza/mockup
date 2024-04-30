@@ -151,6 +151,7 @@ body {
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 2px;
+  padding: 42px 0;
   cursor: pointer;
 }
 .header-banner-wrapper header ul li:last-child {
@@ -956,7 +957,7 @@ main .bestseller-wrapper img {
   top: 50%;
   left: 35%;
   transform: translate(-50%, -50%) rotateY(180deg);
-  z-index: 1;
+  z-index: 0;
 }
 main .bestseller-wrapper .details {
   width: 50%;
@@ -1327,7 +1328,7 @@ main .collection-wrapper .collection .first p, main .collection-wrapper .collect
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: 0;
   color: #021b61;
   text-align: center;
 }
@@ -1625,6 +1626,7 @@ main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .capsules, mai
 main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .capsules::after, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .machines::after, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .ground-coffee::after, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .pour-over-bags::after {
   content: "";
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
   right: 0;
@@ -1636,6 +1638,8 @@ main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .capsules img,
   border-radius: 8px;
   width: 100%;
   height: 100%;
+  position: relative;
+  z-index: -2;
 }
 main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .capsules h2, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .machines h2, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .ground-coffee h2, main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .pour-over-bags h2 {
   font-size: 18px;
@@ -1649,7 +1653,7 @@ main .four-main-cat-wrapper .scroll-slider-wrapper .four-main-cat .capsules h2, 
   top: 50%;
   left: 50%;
   transform: translate(-50%);
-  z-index: 1;
+  z-index: 0;
 }
 main .four-main-cat-wrapper .scroll-slider-wrapper .prev, main .four-main-cat-wrapper .scroll-slider-wrapper .next {
   display: none;
@@ -1902,7 +1906,7 @@ main .four-main-cat-wrapper .scroll-slider-wrapper .prev, main .four-main-cat-wr
 footer {
   background-color: #111;
   color: #fff;
-  z-index: 1;
+  z-index: 0;
   position: relative;
 }
 footer .first {
