@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function nextSlide() {
     currentSlide = (currentSlide + 1) % totalSlides;
     showSlide(currentSlide);
-    setTimeout(nextSlide, 6000);
+    // setTimeout(nextSlide, 6000);
   }
 
   function prevSlide() {
@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelector(".slides").addEventListener("touchmove", drag);
   document.querySelector(".slides").addEventListener("touchend", endDrag);
   
-  setTimeout(nextSlide, 6000);
+  // setTimeout(nextSlide, 6000);
 
 //Best rated slider
 
@@ -223,6 +223,12 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector(".exit-intent-popup").style.display = "flex";
     }
   });
+
+  setTimeout(function(){
+    if (canShowExitIntentPopup()) {
+        document.querySelector(".exit-intent-popup").style.display = "flex";
+    }
+  }, 5000);
 
   document.querySelector(".exit-intent-popup, .exit-intent-popup .close").addEventListener("click", function(){
     document.querySelector(".exit-intent-popup").style.display = "none";
@@ -378,5 +384,26 @@ checkViewportVisibility();
     });
   });
 //Navbar Hover
+
+// navbar variety hover
+  var varities = document.querySelectorAll(".our-coffee-wrapper .variety");
+  varities.forEach(function(variety, index) {
+    var relatedDiv = document.getElementById("flavour-display-" + (index + 1));
+    var firstRelatedDiv = document.getElementById("flavour-display-1");
+    var keepDisplays = document.querySelectorAll(".flavours");
+    variety.addEventListener('mouseenter', function() {
+        keepDisplays.forEach(function(keepDisplay, index) {
+          keepDisplay.classList.remove("keep-displaying");
+        });
+        relatedDiv.classList.add('hovered');
+        (index != 0) && firstRelatedDiv.classList.add('others-hovered');
+    });
+    variety.addEventListener('mouseleave', function() {
+        relatedDiv.classList.remove('hovered');
+        relatedDiv.classList.add('keep-displaying');
+        // (index != 0) && firstRelatedDiv.classList.remove('others-hovered');
+    });
+  });
+// navbar variety hover
 
 });

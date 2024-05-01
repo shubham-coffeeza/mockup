@@ -112,8 +112,8 @@
                     </div>
                 </div>
             </div>
-            <div class="navbar-dropdown-wrapper" id="navbar-wrapper-1">
-                <div class="our-coffee-wrapper container navbar-show" id="show-nav-1">
+            <div class="navbar-dropdown-wrapper hovered" id="navbar-wrapper-1">
+                <div class="our-coffee-wrapper container navbar-show hovered" id="show-nav-1">
                     <div class="offers-deals-wrapper">
                         <img width="300" height="115" src="./homepage/TM_FR_48_Nav_Desk_1.webp" alt="">
                         <img width="300" height="80" src="./homepage/stock-vector-big-deals-banner-special-offer-poster-for-promotion-and-publication-colorful-abstract-geometric-1509398783.jpg" alt="">
@@ -121,21 +121,21 @@
                     </div>
                     <div class="coffee-varities-wrapper">
                         <div>
-                            <div class="variety">
+                            <div class="variety" id="variety-1">
                                 <img  width="75" height="75" src="./homepage/hazelnutfront_1728x.webp" alt="">
                                 <div class="details">
                                     <h2>COFFEE CAPSULES</h2>
                                     <p>Premium Aluminium Coffee Capsules</p>
                                 </div>
                             </div>
-                            <div class="variety">
+                            <div class="variety" id="variety-2">
                                 <img  width="75" height="75" src="./homepage/DSC_0014_360x.webp" alt="">
                                 <div class="details">
                                     <h2>GROUND COFFEE</h2>
                                     <p>Premium exotic Ground Coffee</p>
                                 </div>
                             </div>
-                            <div class="variety">
+                            <div class="variety" id="variety-3">
                                 <img  width="75" height="75" src="./homepage/classicofront_5e4dd455-819b-408c-a4f4-875238e2dbbb_360x.webp" alt="">
                                 <div class="details">
                                     <h2>POUR OVER BAGS</h2>
@@ -147,7 +147,7 @@
                     <div class="shop-by-flavours">
                         <h3>Shop By Flavours</h3>
                         <div>
-                            <div class="capsule-flavour">
+                            <div class="capsule-flavour flavours" id="flavour-display-1">
                                 <div class="flavour-wrapper">
                                     <img src="./homepage/pods/3.webp"width="50" height="50" alt="">
                                     <h2>Classico</h2>
@@ -185,7 +185,7 @@
                                 <!-- <h2>Vanilla & Caramel</h2> -->
                                 <!-- <h2>Vanilla</h2> -->
                             </div>
-                            <div class="ground-coffee-flavour">
+                            <div class="ground-coffee-flavour flavours" id="flavour-display-2">
                                 <div class="flavour-wrapper">
                                     <img src="./homepage//DSC_0014_360x.webp"width="50" height="50" alt="">
                                     <h2>Classico</h2>
@@ -220,7 +220,7 @@
                                 <!-- <h2>Monsooned Malabar</h2> -->
                                 <!-- <h2>Dark Chocolate</h2> -->
                             </div>
-                            <div class="pour-over-flavour">
+                            <div class="pour-over-flavour flavours" id="flavour-display-3">
                                 <div class="flavour-wrapper">
                                     <img src="./homepage/classicofront_5e4dd455-819b-408c-a4f4-875238e2dbbb_360x.webp"width="50" height="50" alt="">
                                     <h2>Classico</h2>
@@ -505,30 +505,36 @@
         <div class="main-div container categories" id="one">
             <div class="main-div-inside">
                 <h2 class="">Exclusive Flavours</h2>
-                <div class="categories-wrapper justify-center align-center">
-                    <div class="category">
-                        <img src="./homepage/SummerMango_CapsuleFront_1728x.webp" alt="" width="150" height="150">
-                        <h3>Summer Mango</h3>
-                    </div>
-                    <div class="category">
-                        <img src="./homepage/MonsoondedMalabar_CapsuleFront_1728x.webp" alt="" width="150" height="150">
-                        <h3>monsoon malabar</h3>
-                    </div>
-                    <div class="category">
-                        <img src="./homepage/EnglishRosefront_1728x.webp" alt="" width="150" height="150">
-                        <h3>English Rose</h3>
-                    </div>
-                    <div class="category">
-                        <img src="./homepage/TurrkishBaklava_CapsuleFront_1728x.webp" alt="" width="150" height="150">
-                        <h3>Turkish Baklava</h3>
-                    </div>
-                    <div class="category">
-                        <img src="./homepage/pumpkinfront_1728x.webp" alt="" width="150" height="150">
-                        <h3>Pumpkin spice</h3>
-                    </div>
-                    <div class="category">
-                        <img src="./homepage/hazelnutfront_1728x.webp" alt="" width="150" height="150">
-                        <h3>Hazelnut Arabica</h3>
+                <div class="relative">
+                    <div class="main-div-inside scroll-slider-wrapper">
+                        <div class="categories-wrapper justify-center align-center">
+                            <div class="category">
+                                <img src="./homepage/SummerMango_CapsuleFront_1728x.webp" alt="" width="150" height="150">
+                                <h3>Summer Mango</h3>
+                            </div>
+                            <div class="category">
+                                <img src="./homepage/MonsoondedMalabar_CapsuleFront_1728x.webp" alt="" width="150" height="150">
+                                <h3>monsoon malabar</h3>
+                            </div>
+                            <div class="category">
+                                <img src="./homepage/EnglishRosefront_1728x.webp" alt="" width="150" height="150">
+                                <h3>English Rose</h3>
+                            </div>
+                            <div class="category">
+                                <img src="./homepage/TurrkishBaklava_CapsuleFront_1728x.webp" alt="" width="150" height="150">
+                                <h3>Turkish Baklava</h3>
+                            </div>
+                            <div class="category">
+                                <img src="./homepage/pumpkinfront_1728x.webp" alt="" width="150" height="150">
+                                <h3>Pumpkin spice</h3>
+                            </div>
+                            <div class="category">
+                                <img src="./homepage/hazelnutfront_1728x.webp" alt="" width="150" height="150">
+                                <h3>Hazelnut Arabica</h3>
+                            </div>
+                        </div>
+                        <button name="prev_button" class="prev">❮</button>
+                        <button name="next_button" class="next">❯</button>
                     </div>
                 </div>
             </div>
