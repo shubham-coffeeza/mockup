@@ -1459,12 +1459,13 @@ main .prod-card .products .top .label-one {
   position: absolute;
   top: 0;
   left: 0;
-  background: red;
+  background: #cb0a0a;
   padding: 4px 15px;
   border-radius: 10px 8px 8px 0;
   color: white;
   font-weight: 600;
   font-size: 14px;
+  text-shadow: 1px 1px 2px black;
 }
 main .prod-card .products .top .label-two {
   position: absolute;
